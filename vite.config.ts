@@ -20,6 +20,9 @@ export default defineConfig((env: ConfigEnv) => {
         name: 'NiukaComponents',
         fileName: 'NiukaComponents',
       },
+      rollupOptions: {
+        external: ['vue-property-decorator']
+      }
     },
     define: {
       'process.env': {},

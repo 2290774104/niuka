@@ -20,7 +20,10 @@ declare interface IComponent {
 
 @Component({ name: 'HomePage' })
 export default class HomePage extends Vue {
-  public components: IComponent[] = [];
+  public components: IComponent[] = [
+    { name: 'StepsPlus', path: '/stepsPlus' },
+    { name: 'StepsPlus', path: '/stepsPlus' },
+  ];
 
   public handleClick(component: IComponent) {
     this.$router.push({

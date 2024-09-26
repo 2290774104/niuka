@@ -1,10 +1,13 @@
+import StepsPlus from './StepsPlus/StepsPlus.vue';
 import _Vue, { PluginFunction, VueConstructor } from 'vue';
 
 interface InstallFunction extends PluginFunction<any> {
   installed?: boolean;
 }
 
-const Components: { [key: string]: VueConstructor } = {};
+const Components: { [key: string]: VueConstructor } = {
+  StepsPlus: StepsPlus,
+};
 
 const install: InstallFunction = (Vue: typeof _Vue) => {
   if (install.installed) return;
@@ -15,5 +18,5 @@ const install: InstallFunction = (Vue: typeof _Vue) => {
 
   install.installed = true;
 };
-export {};
+export { StepsPlus };
 export default install;

@@ -10,16 +10,14 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
+    "element-ui": "^2.15.14",
+    "sass": "^1.79.3",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-plugin-vue2": "^2.0.3",
-    "vue-template-compiler": "^2.7.16"
-  },
-  "dependencies": {
-    "element-ui": "^2.15.14",
-    "sass": "^1.79.3",
-    "vue": "^2",
+    "vue": "2.7.10",
     "vue-property-decorator": "^9.1.2",
-    "vue-router": "3"
+    "vue-router": "3",
+    "vue-template-compiler": "2.7.10"
   }
 }

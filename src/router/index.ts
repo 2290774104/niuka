@@ -10,6 +10,11 @@ const routes: Array<RouteConfig> = [
     name: 'Index',
     component: () => import('@/views/HomePage.vue'),
   },
+  {
+    path: '/stepsPlus',
+    name: 'StepsPlusView',
+    component: () => import('@/views/TestViews/StepsPlus.vue'),
+  },
 ];
 
 const router = new VueRouter({
