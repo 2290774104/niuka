@@ -1,4 +1,4 @@
-import StepsPlus from './StepsPlus/StepsPlus.vue';
+import NiukaSteps from './NiukaSteps/modules/NiukaSteps'
 import _Vue, { PluginFunction, VueConstructor } from 'vue';
 
 interface InstallFunction extends PluginFunction<any> {
@@ -6,7 +6,7 @@ interface InstallFunction extends PluginFunction<any> {
 }
 
 const Components: { [key: string]: VueConstructor } = {
-  StepsPlus: StepsPlus,
+  NiukaSteps: NiukaSteps,
 };
 
 const install: InstallFunction = (Vue: typeof _Vue) => {
@@ -18,5 +18,5 @@ const install: InstallFunction = (Vue: typeof _Vue) => {
 
   install.installed = true;
 };
-export { StepsPlus };
+export { NiukaSteps };
 export default install;

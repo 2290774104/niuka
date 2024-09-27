@@ -11,9 +11,9 @@ const routes: Array<RouteConfig> = [
     component: () => import('@/views/HomePage.vue'),
   },
   {
-    path: '/stepsPlus',
+    path: '/niukaSteps',
     name: 'StepsPlusView',
-    component: () => import('@/views/TestViews/StepsPlus.vue'),
+    component: () => import('@/views/TestViews/NiukaSteps.vue'),
   },
 ];
 

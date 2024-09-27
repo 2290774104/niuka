@@ -12,6 +12,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import router from '@/router'
 
 declare interface IComponent {
   name: string;
@@ -21,12 +22,11 @@ declare interface IComponent {
 @Component({ name: 'HomePage' })
 export default class HomePage extends Vue {
   public components: IComponent[] = [
-    { name: 'StepsPlus', path: '/stepsPlus' },
-    { name: 'StepsPlus', path: '/stepsPlus' },
+    { name: 'NiukaSteps', path: '/niukaSteps' },
   ];
 
   public handleClick(component: IComponent) {
-    this.$router.push({
+    router.push({
       path: component.path,
     });
   }

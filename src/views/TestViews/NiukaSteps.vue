@@ -1,15 +1,16 @@
 <template>
   <div>
-    <steps-plus :active="active" :steps="steps"></steps-plus>
+    <niuka-steps :active="active" :steps="steps"></niuka-steps>
+    <el-button @click="active++">下一步</el-button>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import StepsPlus from '@/components/StepsPlus/StepsPlus.vue';
+import NiukaSteps from '@/components/NiukaSteps/modules/NiukaSteps';
 
-@Component({ name: 'StepsPlusView', components: { StepsPlus } })
-export default class StepsPlusView extends Vue {
+@Component({ name: 'NiukaStepsView', components: { NiukaSteps } })
+export default class NiukaStepsView extends Vue {
   public active = 0;
 
   public steps = [

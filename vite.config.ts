@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export default defineConfig((env: ConfigEnv) => {
   const { mode } = env;
   return {
-    plugins: [createVuePlugin()],
+    plugins: [createVuePlugin({ jsx: true })],
     base: loadEnv(mode, process.cwd()).VITE_APP_BASE_URL,
     server: {
       port: 8080,
@@ -21,8 +21,8 @@ export default defineConfig((env: ConfigEnv) => {
         fileName: 'NiukaComponents',
       },
       rollupOptions: {
-        external: ['vue']
-      }
+        external: ['vue'],
+      },
     },
     define: {
       'process.env': {},

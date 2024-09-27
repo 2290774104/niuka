@@ -1,1 +1,1 @@
-Vue.component('StepsPlus', NiukaComponents.StepsPlus);
+Vue.component('NiukaSteps', NiukaComponents.NiukaSteps);
