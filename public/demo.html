@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./vue.js"></script>
+    <script src="./NiukaComponents.umd.cjs"></script>
+    <script src="./install.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <steps-plus :active="active" :steps="steps"></steps-plus>
+        <button @click="active++">测试</button>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                active: 0,
+                steps: [
+                    { title: '设置基本信息' },
+                    { title: '设置直播功能' },
+                    { title: '设置直播详情' },
+                ]
+            }
+        },
+    })
+</script>
+
+</html>

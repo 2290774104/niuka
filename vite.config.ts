@@ -21,7 +21,7 @@ export default defineConfig((env: ConfigEnv) => {
         fileName: 'NiukaComponents',
       },
       rollupOptions: {
-        external: ['vue-property-decorator']
+        external: ['vue']
       }
     },
     define: {
