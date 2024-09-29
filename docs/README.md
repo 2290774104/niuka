@@ -4,7 +4,7 @@ heroImage: /ico.png
 heroText: 牛咔视频
 tagline: 组件文档
 actionText: 快速上手 →
-actionLink: /pages/components/installation/
+actionLink: /pages/guide/installation/
 features:
   - title: 一致性 Consistency
     details: 与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念
