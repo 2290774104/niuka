@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+niuka-components
 dist-ssr
 *.local
 
