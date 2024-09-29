@@ -10,6 +10,7 @@ export default defineConfig({
   themeConfig: {
     nav: navbar,
     sidebar: sidebar,
+    sidebarDepth: 0,
   },
   plugins: [
     ['vuepress-plugin-demo-container', {}],
@@ -19,5 +20,6 @@ export default defineConfig({
         tsLoaderOptions: {},
       },
     ],
+    ['vuepress-plugin-side-anchor', {}],
   ],
 });

@@ -53,6 +53,9 @@ importers:
       vuepress-plugin-demo-container:
         specifier: ^0.2.0
         version: 0.2.0
+      vuepress-plugin-side-anchor:
+        specifier: ^1.0.6
+        version: 1.0.6
       vuepress-plugin-typescript:
         specifier: ^0.3.1
         version: 0.3.1(typescript@5.5.3)(webpack@4.47.0)
@@ -5432,6 +5435,9 @@ packages:
 
   vuepress-plugin-demo-container@0.2.0:
     resolution: {integrity: sha512-IXWZUc9+mErxjhBMRvhjHkGlXC3aXLS8wRV4kh4RZYAOVtb8nLv2fmpzwrSZrnIOXLGMcMTObdFruVzX9kBylw==}
+
+  vuepress-plugin-side-anchor@1.0.6:
+    resolution: {integrity: sha512-oITsvBimHDDlKnAtqXFgTyYRMonjVWzR+4aZ2Dx54a4hMrWiXV0e23RTrh/zBzs8hH1QlO5sf/+P734+tfZfjw==}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     resolution: {integrity: sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==}
@@ -11822,6 +11828,8 @@ snapshots:
       - supports-color
 
   vuepress-plugin-demo-container@0.2.0: {}
+
+  vuepress-plugin-side-anchor@1.0.6: {}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     dependencies:
