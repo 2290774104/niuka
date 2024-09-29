@@ -18,8 +18,9 @@ export default defineConfig((env: ConfigEnv) => {
       lib: {
         entry: './src/components/index.ts',
         name: 'NiukaComponents',
-        fileName: 'NiukaComponents',
+        fileName: 'index',
       },
+      outDir: 'niuka-components',
       rollupOptions: {
         external: ['vue'],
       },
