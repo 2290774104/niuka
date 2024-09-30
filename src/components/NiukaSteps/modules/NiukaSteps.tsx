@@ -2,7 +2,7 @@ import '../styles/index.scss';
 import { CreateElement } from 'vue';
 import type { IStep, IStepItem } from '../types';
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import NiukaStepsItem from '../components/NiukaStepsItem.tsx';
+import NiukaStepsItem from '../components/NiukaStepsItem';
 @Component({ name: 'NiukaSteps', components: { NiukaStepsItem } })
 export default class NiukaSteps extends Vue {
   @Prop({ type: Number, required: true }) readonly active!: number;
