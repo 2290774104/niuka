@@ -20,6 +20,7 @@ export default defineConfig((env: ConfigEnv) => {
       ],
     },
     build: {
+      target: ['es2015'],
       terserOptions: {
         compress: {
           drop_console: true,
@@ -30,6 +31,7 @@ export default defineConfig((env: ConfigEnv) => {
         entry: './src/components/index.ts',
         name: 'NiukaComponents',
         fileName: 'index',
+        formats: ['cjs', 'umd', 'es'],
       },
       outDir: 'niuka-components',
       rollupOptions: {

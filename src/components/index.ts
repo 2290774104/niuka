@@ -21,4 +21,4 @@ const install: InstallFunction = (Vue: typeof _Vue) => {
   install.installed = true;
 };
 export { NiukaSteps, NiukaTable };
-// export default install;
+export default install;

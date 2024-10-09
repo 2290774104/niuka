@@ -32,5 +32,9 @@
     "vuepress-plugin-demo-container": "^0.2.0",
     "vuepress-plugin-side-anchor": "^1.0.6",
     "vuepress-plugin-typescript": "^0.3.1"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
 }
