@@ -1,12 +1,14 @@
-import NiukaSteps from './NiukaSteps/modules/NiukaSteps'
 import _Vue, { PluginFunction, VueConstructor } from 'vue';
+import NiukaSteps from './NiukaSteps/modules/NiukaSteps';
+import NiukaTable from './NiukaTable/modules/NiukaTable';
 
 interface InstallFunction extends PluginFunction<any> {
   installed?: boolean;
 }
 
 const Components: { [key: string]: VueConstructor } = {
-  NiukaSteps: NiukaSteps,
+  NiukaSteps,
+  NiukaTable,
 };
 
 const install: InstallFunction = (Vue: typeof _Vue) => {
@@ -18,5 +20,5 @@ const install: InstallFunction = (Vue: typeof _Vue) => {
 
   install.installed = true;
 };
-export { NiukaSteps };
-export default install;
+export { NiukaSteps, NiukaTable };
+// export default install;

@@ -23,6 +23,7 @@ declare interface IComponent {
 export default class HomePage extends Vue {
   public components: IComponent[] = [
     { name: 'NiukaSteps', path: '/niukaSteps' },
+    { name: 'NiukaTable', path: '/NiukaTable' },
   ];
 
   public handleClick(component: IComponent) {

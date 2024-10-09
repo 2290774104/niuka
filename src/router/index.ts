@@ -15,6 +15,11 @@ const routes: Array<RouteConfig> = [
     name: 'StepsPlusView',
     component: () => import('@/views/TestViews/NiukaSteps.vue'),
   },
+  {
+    path: '/niukaTable',
+    name: 'NiukaTableView',
+    component: () => import('@/views/TestViews/NiukaTable.vue'),
+  },
 ];
 
 const router = new VueRouter({

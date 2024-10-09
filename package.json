@@ -1,7 +1,7 @@
 {
   "name": "niuka-components",
   "version": "0.0.1",
-  "main": "./index.js",
+  "main": "./index.mjs",
   "typings": "types/index.d.ts",
   "scripts": {
     "dev": "vite",
@@ -11,11 +11,15 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.9",
     "@types/node": "^20.14.9",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
     "async-validator": "1.11.5",
     "core-js": "^2.6.12",
     "element-ui": "^2.15.14",
+    "lodash": "^4.17.21",
     "niuka-components": "file:./niuka-components",
+    "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.79.3",
     "typescript": "^5.5.3",
     "vite": "^5.3.1",
