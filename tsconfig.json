@@ -25,6 +25,6 @@
     "noFallthroughCasesInSwitch": true,
     "jsx": "preserve"
   },
-  "include": ["src", "docs"],
+  "include": ["src", "docs", "packages"],
   "exclude": ["node_modules"]
 }
