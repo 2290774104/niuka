@@ -1,0 +1,20 @@
+{
+  "name": "niuka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.7.16",
+    "vue-property-decorator": "^9.1.2",
+    "vuepress": "^1.9.10",
+    "vuepress-plugin-typescript": "^0.3.1"
+  }
+}
