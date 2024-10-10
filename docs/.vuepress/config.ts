@@ -1,5 +1,6 @@
 import { defineConfig } from 'vuepress/config';
 export default defineConfig({
+  sass: { indentedSyntax: true },
   configureWebpack: {
     module: {
       rules: [
