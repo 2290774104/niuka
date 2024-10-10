@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,11 +16,14 @@
   "dependencies": {
     "vue": "^2.7.16",
     "vue-property-decorator": "^9.1.2",
+    "vue-router": "^3.6.5",
     "vuepress": "^1.9.10",
     "vuepress-plugin-typescript": "^0.3.1"
   },
   "devDependencies": {
     "sass": "^1.79.4",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "vite": "^5.4.8",
+    "vite-plugin-vue2": "^2.0.3"
   }
 }

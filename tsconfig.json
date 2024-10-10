@@ -7,7 +7,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["examples/*"],
+      "component/*": ["packages/*"]
     },
     "experimentalDecorators": true,
 
@@ -25,6 +26,6 @@
     "noFallthroughCasesInSwitch": true,
     "jsx": "preserve"
   },
-  "include": ["src", "docs", "packages"],
+  "include": ["examples", "docs", "packages"],
   "exclude": ["node_modules"]
 }
