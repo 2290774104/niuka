@@ -14,6 +14,9 @@ export default defineConfig({
   },
   port: 8081,
   sass: { indentedSyntax: true },
+  chainWebpack(config) {
+    config.resolve.alias.set('core-js/library/fn', 'core-js/features');
+  },
   configureWebpack: {
     module: {
       rules: [
