@@ -47,6 +47,7 @@ export default defineConfig({
       ],
     },
   },
+  // @ts-ignore
   plugins: [
     [
       'vuepress-plugin-typescript',
@@ -56,5 +57,8 @@ export default defineConfig({
         },
       },
     ],
+    // 插件版本较老不符合第三方插件命名规范
+    ['@vuepress-reco/extract-code'],
+    ['vuepress-plugin-side-anchor', {}]
   ],
 });

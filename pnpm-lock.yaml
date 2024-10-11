@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@vuepress-reco/vuepress-plugin-extract-code':
+        specifier: ^1.0.4
+        version: 1.0.4
       element-ui:
         specifier: ^2.15.14
         version: 2.15.14(vue@2.7.16)
@@ -23,6 +26,9 @@ importers:
       vuepress:
         specifier: ^1.9.10
         version: 1.9.10(@vue/compiler-sfc@3.5.11)(hogan.js@3.0.2)(lodash@4.17.21)
+      vuepress-plugin-side-anchor:
+        specifier: ^1.0.6
+        version: 1.0.6
       vuepress-plugin-typescript:
         specifier: ^0.3.1
         version: 0.3.1(typescript@5.6.3)(webpack@4.47.0)
@@ -1147,6 +1153,9 @@ packages:
 
   '@vue/shared@3.5.11':
     resolution: {integrity: sha512-W8GgysJVnFo81FthhzurdRAWP/byq3q2qIw70e0JWblzVhjgOMiC2GyovXrZTFQJnFVryYaKGP3Tc9vYzYm6PQ==}
+
+  '@vuepress-reco/vuepress-plugin-extract-code@1.0.4':
+    resolution: {integrity: sha512-J4Cas3JRxs0TnfjtzQ+3bl7iNwL/va9cOXMtpayse3sETul863BwYk1vEBXRAZMiLmbmWqnBrGIrJGmD/TnO5Q==}
 
   '@vuepress/core@1.9.10':
     resolution: {integrity: sha512-H9ddo5fSinPb8QYl8OJFbZikMpOW84bm/U3Drzz8CnCXNtpda7CU2wX/XzOhe98G8jp45xhtZRkxOrqzBBAShA==}
@@ -5388,6 +5397,9 @@ packages:
   vuepress-plugin-container@2.1.5:
     resolution: {integrity: sha512-TQrDX/v+WHOihj3jpilVnjXu9RcTm6m8tzljNJwYhxnJUW0WWQ0hFLcDTqTBwgKIFdEiSxVOmYE+bJX/sq46MA==}
 
+  vuepress-plugin-side-anchor@1.0.6:
+    resolution: {integrity: sha512-oITsvBimHDDlKnAtqXFgTyYRMonjVWzR+4aZ2Dx54a4hMrWiXV0e23RTrh/zBzs8hH1QlO5sf/+P734+tfZfjw==}
+
   vuepress-plugin-smooth-scroll@0.0.3:
     resolution: {integrity: sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==}
 
@@ -6909,6 +6921,8 @@ snapshots:
       - whiskers
 
   '@vue/shared@3.5.11': {}
+
+  '@vuepress-reco/vuepress-plugin-extract-code@1.0.4': {}
 
   '@vuepress/core@1.9.10(@vue/compiler-sfc@3.5.11)(hogan.js@3.0.2)(lodash@4.17.21)':
     dependencies:
@@ -11715,6 +11729,8 @@ snapshots:
       markdown-it-container: 2.0.0
     transitivePeerDependencies:
       - supports-color
+
+  vuepress-plugin-side-anchor@1.0.6: {}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     dependencies:
