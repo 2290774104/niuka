@@ -13,6 +13,20 @@ const sidebar: SidebarConfig4Multiple = {
       path: '/pages/guide/quickstart',
     },
   ],
+  '/pages/components/': [
+    {
+      title: 'Overview 组件总览',
+      collapsable: false,
+      children: [
+        { title: 'Overview 组件总览', path: '/pages/components/overview' },
+      ],
+    },
+    {
+      title: 'Navigation 导航',
+      collapsable: true,
+      children: [{ title: 'Steps 步骤条', path: '/pages/components/steps' }],
+    },
+  ],
 };
 
 export default sidebar;
