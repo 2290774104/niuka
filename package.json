@@ -16,6 +16,7 @@
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
     "element-ui": "^2.15.14",
+    "lodash": "^4.17.21",
     "vue": "^2.7.16",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.6.5",
@@ -24,6 +25,7 @@
     "vuepress-plugin-typescript": "^0.3.1"
   },
   "devDependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.79.4",
     "sass-loader": "10",

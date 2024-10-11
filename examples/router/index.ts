@@ -12,8 +12,13 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/niukaSteps',
-    name: 'StepsPlusView',
+    name: 'NiukaSteps',
     component: () => import('@/views/demo/NiukaSteps/index.vue'),
+  },
+  {
+    path: '/niukaTable',
+    name: 'NiukaTable',
+    component: () => import('@/views/demo/NiukaTable/index.vue'),
   },
 ];
 

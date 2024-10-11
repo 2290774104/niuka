@@ -1,0 +1,22 @@
+.niuka-table {
+  font-size: 16px;
+
+  .el-pagination {
+    margin-top: 10px;
+    text-align: right;
+    justify-content: flex-end;
+
+    .el-pagination__total {
+      margin-right: 0;
+    }
+  }
+
+  .el-table__body-wrapper {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+  }
+
+  .el-table__cell {
+    padding: 12px 0;
+  }
+}

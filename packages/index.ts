@@ -1,9 +1,10 @@
 import _Vue, { PluginFunction, VueConstructor } from 'vue';
 import NiukaSteps from './Steps';
+import NiukaTable from './Table';
 import { version } from '../package.json';
 
 // 存储组件列表
-const components = [NiukaSteps];
+const components = [NiukaSteps, NiukaTable];
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 interface InstallFunction extends PluginFunction<any> {
@@ -32,7 +33,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-export { NiukaSteps };
+export { NiukaSteps, NiukaTable };
 
 export default {
   version,

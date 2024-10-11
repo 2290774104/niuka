@@ -14,6 +14,8 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
       alias: [
         { find: '@', replacement: resolve(__dirname, './examples/') },
         { find: 'component', replacement: resolve(__dirname, './packages/') },
+        // 
+        { find: 'vue', replacement: 'vue/dist/vue.esm.js' },
       ],
     },
     build: {
