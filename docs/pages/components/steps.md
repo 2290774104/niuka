@@ -43,9 +43,9 @@ description: 步骤条组件
   <<< @/docs/.vuepress/components/docsComponents/NiukaSteps/space.vue
 </preview-components>
 
-## StepsPlus Attributes
+## NiukaSteps Attributes
 
-<attribute-table :data="stepsPlusAttributes"></attribute-table>
+<attribute-table :data="niukaStepsAttributes"></attribute-table>
 
 ### Steps Attributes
 
@@ -55,7 +55,7 @@ description: 步骤条组件
   export default {
     data() {
       return {
-        stepsPlusAttributes: [
+        niukaStepsAttributes: [
           { name: 'space', dec: '每个 step 的间距，不填写默认 152', type: 'number', default: 152 },
           { name: 'active', dec: '设置当前激活步骤', type: 'number', default: 0 },
           { name: 'steps', dec: '步骤配置', type: 'link:Steps:#steps-attributes' },
