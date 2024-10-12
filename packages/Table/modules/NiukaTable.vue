@@ -155,7 +155,11 @@ export default class NiukaTable extends Vue {
               store: any;
               _self: any;
             }) {
-              const column = Object.assign({ scopedSlots: {} }, o, elColumn);
+              const column = Object.assign(
+                { scopedSlots: {} },
+                props,
+                elColumn
+              );
               const cellValue = getCellValue(column, row);
               let cellContent = cellValue;
               const customRender =
@@ -176,7 +180,15 @@ export default class NiukaTable extends Vue {
               return cellContent;
             },
           };
-          const sampleScopedSlots = { scopedSlots };
+
+          let sampleScopedSlots = {};
+          // 移除不支持自定义插槽的列类型 type[index/selection]
+          if (!['index', 'selection'].includes(props.type)) {
+            sampleScopedSlots = { scopedSlots };
+          }
+
+          console.log(sampleScopedSlots);
+
           return (
             <el-table-column
               key={uuid()}
