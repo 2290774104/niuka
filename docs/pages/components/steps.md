@@ -45,15 +45,26 @@ description: 步骤条组件
 
 ## StepsPlus Attributes
 
-| 属性名 | 说明                             | 类型                       | 默认值 |
-| ------ | -------------------------------- | -------------------------- | ------ |
-| space  | 每个 step 的间距，不填写默认 152 | number                     | —      |
-| active | 设置当前激活步骤                 | number                     | 0      |
-| steps  | 步骤配置                         | [Steps](#steps-attributes) | —      |
+<attribute-table :data="stepsPlusAttributes"></attribute-table>
 
 ### Steps Attributes
 
-| 属性名 | 说明       | 类型                                                                        | 默认值 |
-| ------ | ---------- | --------------------------------------------------------------------------- | ------ |
-| title  | 步骤的标题 | string                                                                      | —      |
-| icon   | 步骤的图标 | enum <tool-tip content="'filter' &#124; 'edit' &#124;  setting"></tool-tip> | —      |
+<attribute-table :data="stepsAttributes"></attribute-table>
+
+<script>
+  export default {
+    data() {
+      return {
+        stepsPlusAttributes: [
+          { name: 'space', dec: '每个 step 的间距，不填写默认 152', type: 'number', default: 152 },
+          { name: 'active', dec: '设置当前激活步骤', type: 'number', default: 0 },
+          { name: 'steps', dec: '步骤配置', type: 'link:Steps:#steps-attributes' },
+        ],
+        stepsAttributes: [
+          { name: 'title', dec: '步骤的标题', type: 'string'},
+          { name: 'icon', dec: '步骤的图标', type: 'enum:filter|edit|setting' },
+        ]
+      }
+    }
+  }
+</script>
