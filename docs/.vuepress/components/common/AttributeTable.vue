@@ -3,7 +3,14 @@
     <niuka-table :data="data" :columns="columns" :pagination="false">
       <template #type="{ cellValue }">
         <div v-if="cellValue.indexOf('link:') === 0">
-          <el-link :underline="false" :href="cellValue.split(':')[2]">
+          <el-link
+            :underline="false"
+            v-if="cellValue.includes('http')"
+            @click="handleOpen(cellValue.substr(cellValue.indexOf('http')))"
+          >
+            {{ cellValue.split(':')[1] }}
+          </el-link>
+          <el-link :underline="false" v-else :href="cellValue.split(':')[2]">
             {{ cellValue.split(':')[1] }}
           </el-link>
         </div>
@@ -12,6 +19,21 @@
             <div slot="content" class="tips">{{ showTips(cellValue) }}</div>
             <div>
               enum
+              <el-button type="text">
+                <i class="el-icon-warning-outline"></i>
+              </el-button>
+            </div>
+          </el-tooltip>
+        </div>
+        <div v-else-if="cellValue.indexOf('Function:') === 0">
+          <el-tooltip
+            effect="light"
+            placement="top"
+            :content="cellValue.split(':')[1]"
+          >
+            <div slot="content" class="tips">{{ showFunc(cellValue) }}</div>
+            <div>
+              Function
               <el-button type="text">
                 <i class="el-icon-warning-outline"></i>
               </el-button>
@@ -52,7 +74,11 @@ export default class AttributeTable extends Vue {
     { label: '默认值', prop: 'default', customRender: 'def', align: 'left' },
   ];
 
-  public eventColumns: IColumn[] = [];
+  public eventColumns: IColumn[] = [
+    { label: '事件名', prop: 'name', align: 'left' },
+    { label: '说明', prop: 'dec', align: 'left' },
+    { label: '类型', prop: 'type', customRender: 'type', align: 'left' },
+  ];
 
   public get columns(): IColumn[] {
     return this.type === 'attribute'
@@ -68,6 +94,14 @@ export default class AttributeTable extends Vue {
         return `'${i}'`;
       })
       .join(' | ');
+  }
+
+  public showFunc(cellValue: string) {
+    return cellValue.slice(cellValue.indexOf('Function:'));
+  }
+
+  public handleOpen(url: string) {
+    open(url, '_blank');
   }
 }
 </script>
