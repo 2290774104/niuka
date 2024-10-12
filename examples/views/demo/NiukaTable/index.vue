@@ -27,7 +27,7 @@ export default class NiukaTableView extends Vue {
   ];
 
   public columns: IColumn[] = [
-    { label: '序号', prop: 'selection', type: 'selection' },
+    { label: '', prop: 'selection', type: 'selection' },
     { label: '序号', prop: 'index', type: 'index' },
     { label: '标题', prop: 'title' },
     { label: '日期', prop: 'date' },

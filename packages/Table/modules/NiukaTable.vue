@@ -187,8 +187,6 @@ export default class NiukaTable extends Vue {
             sampleScopedSlots = { scopedSlots };
           }
 
-          console.log(sampleScopedSlots);
-
           return (
             <el-table-column
               key={uuid()}
