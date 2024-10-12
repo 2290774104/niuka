@@ -38,7 +38,7 @@ export default class NiukaSteps extends Vue {
         );
       });
 
-    return <div class="steps-plus">{renderItem(this.stepsList)}</div>;
+    return <div class="niuka-steps">{renderItem(this.stepsList)}</div>;
   }
 }
 </script>
