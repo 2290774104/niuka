@@ -54,6 +54,7 @@ export default defineConfig({
       {
         tsLoaderOptions: {
           // ts-loader 的所有配置项
+          transpileOnly: true
         },
       },
     ],
