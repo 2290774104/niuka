@@ -15,10 +15,10 @@
           </el-link>
         </div>
         <div v-else-if="cellValue.indexOf('enum:') === 0">
+          enum
           <el-tooltip effect="light" placement="top">
             <div slot="content" class="tips">{{ showTips(cellValue) }}</div>
             <div>
-              enum
               <el-button type="text">
                 <i class="el-icon-warning-outline"></i>
               </el-button>
@@ -26,6 +26,7 @@
           </el-tooltip>
         </div>
         <div v-else-if="cellValue.indexOf('Function:') === 0">
+          Function
           <el-tooltip
             effect="light"
             placement="top"
@@ -33,7 +34,6 @@
           >
             <div slot="content" class="tips">{{ showFunc(cellValue) }}</div>
             <div>
-              Function
               <el-button type="text">
                 <i class="el-icon-warning-outline"></i>
               </el-button>
@@ -122,6 +122,10 @@ export default class AttributeTable extends Vue {
 
   .el-link {
     color: #3eaf7c;
+  }
+
+  .el-tooltip {
+    display: inline;
   }
 }
 
