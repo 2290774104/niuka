@@ -4,6 +4,7 @@
       v-model="value"
       :info="info"
       @change="handleChange"
+      @edit="handleEdit"
       showRemark
       userEdit
       showSort
@@ -15,6 +16,7 @@
 
 <script lang="ts">
 import NiukaSwitch from 'component/Switch';
+import { Message } from 'element-ui';
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({ name: 'NiukaSwitchView', components: { NiukaSwitch } })
@@ -30,6 +32,10 @@ export default class NiukaSwitchView extends Vue {
 
   public handleChange(value: string) {
     console.log(value);
+  }
+
+  public handleEdit() {
+    Message.info('点击了编辑按钮')
   }
 }
 </script>
