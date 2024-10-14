@@ -26,6 +26,11 @@ const sidebar: SidebarConfig4Multiple = {
       collapsable: true,
       children: [{ title: 'Steps 步骤条', path: '/pages/components/steps' }],
     },
+    {
+      title: 'Data 数据展示',
+      collapsable: true,
+      children: [{ title: 'Table 表格', path: '/pages/components/table' }],
+    },
   ],
 };
 
