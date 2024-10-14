@@ -20,6 +20,11 @@ const routes: Array<RouteConfig> = [
     name: 'NiukaTable',
     component: () => import('@/views/demo/NiukaTable/index.vue'),
   },
+  {
+    path: '/niukaSwitch',
+    name: 'NiukaSwitch',
+    component: () => import('@/views/demo/NiukaSwitch/index.vue'),
+  },
 ];
 
 const router = new VueRouter({
