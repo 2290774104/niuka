@@ -62,7 +62,8 @@ export default class AttributeTable extends Vue {
   // @ts-ignore
   @Prop({ type: String, default: 'attribute' }) readonly type!:
     | 'attribute'
-    | 'event';
+    | 'event'
+    | 'slot';
 
   // @ts-ignore
   @Prop({ type: Array, default: () => [] }) readonly data!: IData[];
@@ -80,10 +81,18 @@ export default class AttributeTable extends Vue {
     { label: '类型', prop: 'type', customRender: 'type', align: 'left' },
   ];
 
+  public slotColumns: IColumn[] = [
+    { label: '名称', prop: 'name', align: 'left' },
+    { label: '说明', prop: 'dec', align: 'left' },
+  ];
+
   public get columns(): IColumn[] {
-    return this.type === 'attribute'
-      ? this.attributeColumns
-      : this.eventColumns;
+    const map = {
+      attribute: this.attributeColumns,
+      event: this.eventColumns,
+      slot: this.slotColumns,
+    };
+    return map[this.type];
   }
 
   public showTips(cellValue: string) {

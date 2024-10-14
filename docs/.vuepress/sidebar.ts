@@ -22,14 +22,19 @@ const sidebar: SidebarConfig4Multiple = {
       ],
     },
     {
-      title: 'Navigation 导航',
+      title: 'Form 表单组件',
       collapsable: true,
-      children: [{ title: 'Steps 步骤条', path: '/pages/components/steps' }],
+      children: [{ title: 'Switch 开关', path: '/pages/components/switch' }],
     },
     {
       title: 'Data 数据展示',
       collapsable: true,
       children: [{ title: 'Table 表格', path: '/pages/components/table' }],
+    },
+    {
+      title: 'Navigation 导航',
+      collapsable: true,
+      children: [{ title: 'Steps 步骤条', path: '/pages/components/steps' }],
     },
   ],
 };

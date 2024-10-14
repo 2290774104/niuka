@@ -59,7 +59,7 @@ description: 表格组件
 
 ## NiukaTable Events
 
-<attribute-table :data="niukaTableEvents"></attribute-table>
+<attribute-table :data="niukaTableEvents" type="event"></attribute-table>
 
 ## Column Attributes
 
