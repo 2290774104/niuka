@@ -27,6 +27,7 @@ export default class NiukaTable extends Vue {
   // 是否在数据重渲染后自动滚动到顶部
   @Prop({ type: Boolean, default: true }) readonly autoToTop?: boolean;
 
+  // 组件高度，默认占满父级容器
   @Prop({ type: [Number, String], default: '' }) readonly height?:
     | number
     | string;
@@ -102,7 +103,7 @@ export default class NiukaTable extends Vue {
         name: 'height-adaptive',
         value: {
           height: this.height,
-          bottomOffset: 42,
+          bottomOffset: this.isShowPag ? 42 : 0,
         },
       },
     ];
