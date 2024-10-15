@@ -25,6 +25,11 @@ const routes: Array<RouteConfig> = [
     name: 'NiukaSwitch',
     component: () => import('@/views/demo/NiukaSwitch/index.vue'),
   },
+  {
+    path: '/niukaAnchor',
+    name: 'NiukaAnchor',
+    component: () => import('@/views/demo/NiukaAnchor/index.vue'),
+  },
 ];
 
 const router = new VueRouter({

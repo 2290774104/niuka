@@ -25,6 +25,7 @@ export default class HomePage extends Vue {
     { name: 'NiukaSteps', path: '/niukaSteps' },
     { name: 'NiukaTable', path: '/niukaTable' },
     { name: 'NiukaSwitch', path: '/niukaSwitch' },
+    { name: 'NiukaAnchor', path: '/niukaAnchor' },
   ];
 
   public handleClick(component: IComponent) {
