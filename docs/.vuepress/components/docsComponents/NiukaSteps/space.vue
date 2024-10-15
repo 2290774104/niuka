@@ -5,7 +5,6 @@
 </template>
 <script>
 export default {
-  name: 'NiukaStepsSpace',
   data() {
     return {
       active: 0,

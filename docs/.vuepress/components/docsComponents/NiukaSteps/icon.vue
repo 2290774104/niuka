@@ -5,7 +5,6 @@
 </template>
 <script>
 export default {
-  name: 'NiukaStepsIcon',
   data() {
     return {
       active: 0,

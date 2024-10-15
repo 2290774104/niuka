@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  name: 'NiukaStepsBase',
   data() {
     return {
       active: 0,

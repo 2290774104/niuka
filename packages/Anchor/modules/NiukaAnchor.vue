@@ -1,7 +1,7 @@
 <script lang="tsx">
 import { StyleValue } from 'vue';
 import '../style/index.scss';
-import { findNearNum } from '../../utils'
+import { findNearNum } from '../../utils';
 import type { IAnchor } from '../types';
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 
@@ -10,8 +10,8 @@ export default class NiukaAnchor extends Vue {
   // 手动配置锚点
   @Prop({ type: Array, default: () => [] }) readonly anchorLinks!: IAnchor[];
 
-  // 自动生成锚点容器的 class 名
-  @Prop({ type: String, default: 'sub-title' }) readonly linkClass!: string;
+  // 自动生成锚点容器筛选条件
+  @Prop({ type: String, default: '.sub-title' }) readonly query!: string;
 
   // 是否固定到屏幕
   @Prop({ type: Boolean, default: true }) readonly fixed!: boolean;
@@ -31,17 +31,15 @@ export default class NiukaAnchor extends Vue {
 
   private getAnchorList() {
     const navs: IAnchor[] = [];
-    document
-      .querySelectorAll(`.${this.linkClass}`)
-      .forEach((el: HTMLElement, i) => {
-        if (el.id) {
-          navs.push({
-            index: i,
-            label: el.innerText,
-            link: el.id,
-          });
-        }
-      });
+    document.querySelectorAll(this.query).forEach((el: HTMLElement, i) => {
+      if (el.id) {
+        navs.push({
+          index: i,
+          label: el.innerText,
+          link: el.id,
+        });
+      }
+    });
     return this.anchorLinks.length > 0
       ? this.anchorLinks.map((o, i) => {
           return {
