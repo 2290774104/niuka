@@ -8,7 +8,7 @@ export declare interface IAnchor {
 
 export declare class NiukaAnchor extends NiukaComponents {
   anchorLinks?: IAnchor[];
-  linkClass?: string;
+  query?: string;
   fixed?: boolean;
   width?: string | number;
   top?: string;

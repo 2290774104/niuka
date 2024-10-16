@@ -12,6 +12,10 @@ import NiukaTableSlot from './NiukaTable/slot.vue';
 import NiukaStepsBase from './NiukaSteps/base.vue';
 import NiukaStepsIcon from './NiukaSteps/icon.vue';
 import NiukaStepsSpace from './NiukaSteps/space.vue';
+// 锚点demo
+import NiukaAnchorBase from './NiukaAnchor/base.vue';
+import NiukaAnchorAuto from './NiukaAnchor/auto.vue';
+import NiukaAnchorFixed from './NiukaAnchor/fixed.vue';
 
 const docsComponents: any = {
   NiukaSwitchBase,
@@ -24,6 +28,9 @@ const docsComponents: any = {
   NiukaStepsBase,
   NiukaStepsIcon,
   NiukaStepsSpace,
+  NiukaAnchorBase,
+  NiukaAnchorAuto,
+  NiukaAnchorFixed,
 };
 
 export default {

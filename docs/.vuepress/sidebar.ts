@@ -34,7 +34,10 @@ const sidebar: SidebarConfig4Multiple = {
     {
       title: 'Navigation 导航',
       collapsable: true,
-      children: [{ title: 'Steps 步骤条', path: '/pages/components/steps' }],
+      children: [
+        { title: 'Steps 步骤条', path: '/pages/components/steps' },
+        { title: 'Anchor 锚点', path: '/pages/components/anchor' },
+      ],
     },
   ],
 };
