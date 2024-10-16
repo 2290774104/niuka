@@ -1,6 +1,6 @@
 import axios from 'axios';
 import type {
-  InternalAxiosRequestConfig,
+  AxiosRequestConfig,
   AxiosInstance,
   AxiosResponse,
 } from 'axios';
@@ -31,7 +31,7 @@ class Request {
 
     // 类请求拦截
     this.instance.interceptors.request.use(
-      (res: InternalAxiosRequestConfig) => {
+      (res: AxiosRequestConfig) => {
         console.log('全局请求拦截器');
         return res;
       }
@@ -116,7 +116,7 @@ class Request {
       // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
       if (config.interceptors?.requestInterceptors) {
         config = config.interceptors.requestInterceptors(
-          config as InternalAxiosRequestConfig
+          config as AxiosRequestConfig
         );
       }
       const { url } = config;

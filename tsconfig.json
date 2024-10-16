@@ -8,7 +8,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["examples/*"],
-      "component/*": ["packages/*"]
+      "component/*": ["packages/*"],
+      "@http": ["http/index.ts"]
     },
     "experimentalDecorators": true,
 

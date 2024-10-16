@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
-    "axios": "^1.7.7",
+    "axios": "0.21.1",
     "element-ui": "^2.15.14",
     "lodash": "^4.17.21",
     "vue": "^2.7.16",

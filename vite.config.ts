@@ -16,6 +16,7 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
         { find: 'component', replacement: resolve(__dirname, './packages/') },
         // 
         { find: 'vue', replacement: 'vue/dist/vue.esm.js' },
+        { find: '@http', replacement: resolve(__dirname, './http/index.ts') }
       ],
     },
     build: {
