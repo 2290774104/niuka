@@ -12,6 +12,13 @@ import docsComponents from './components/docsComponents';
 export default ({ Vue }) => {
   Vue.use(ElementUI);
   Vue.use(NiukaComponents);
+  // Vue.mixin({
+  //   mounted() {
+  //     import('../../packages').then((m) => {
+  //       Vue.use(m.default)
+  //     })
+  //   }
+  // })
   Vue.component('OverviewList', OverviewList);
   Vue.component('preview-components', PreviewComponents);
   Vue.component('attribute-table', AttributeTable);
