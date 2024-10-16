@@ -37,7 +37,7 @@ export default class OverviewList extends Vue {
   @Prop({ type: Array, default: () => [] }) readonly list: ICard[];
 
   public handleClick(item: ICard) {
-    const src = `/pages/components/${item.src}`;
+    const src = `${(this as any).$site.base}pages/components/${item.src}`;
     const a = document.createElement('a');
     console.log(src);
 
