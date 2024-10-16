@@ -9,6 +9,8 @@ import AttributeTable from './components/common/AttributeTable.vue';
 
 import docsComponents from './components/docsComponents';
 
+import http from '../../http'
+
 export default ({ Vue }) => {
   Vue.use(ElementUI);
   Vue.use(NiukaComponents);
@@ -23,4 +25,5 @@ export default ({ Vue }) => {
   Vue.component('preview-components', PreviewComponents);
   Vue.component('attribute-table', AttributeTable);
   Vue.use(docsComponents);
+  Vue.prototype.http = http
 };

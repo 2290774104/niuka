@@ -17,3 +17,15 @@ export {
   $postBlob,
   $postArraybuffer,
 };
+
+const http = {
+  $post,
+  $get,
+  $delete,
+  $put,
+  $getBlob,
+  $postBlob,
+  $postArraybuffer,
+}
+
+export default http
