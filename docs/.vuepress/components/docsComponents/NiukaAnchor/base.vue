@@ -13,8 +13,8 @@ export default {
         { label: '基本用法', link: '基本用法' },
         { label: '自动生成', link: '自动生成' },
         { label: '固定到屏幕', link: '固定到屏幕' },
-        { label: 'NiukaAnchor Attributes', link: 'NiukaAnchor Attributes' },
-        { label: 'Anchor Attributes', link: 'Anchor Attributes' },
+        { label: 'NiukaAnchor Attributes', link: 'niukaanchor-attributes' },
+        { label: 'Anchor Attributes', link: 'anchor-attributes' },
       ],
     };
   },
