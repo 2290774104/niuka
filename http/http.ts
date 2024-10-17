@@ -1,7 +1,7 @@
 import Request from './request';
 
 interface HTTPRequestConfig {
-  (url: string, data: any, contentType?: string): any;
+  (url: string, data?: any, contentType?: string): any;
 }
 
 const AJ = 'application/json';
