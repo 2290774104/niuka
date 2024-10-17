@@ -112,6 +112,10 @@ export default class NiukaAnchor extends Vue {
     });
   }
 
+  beforeDestroy() {
+    removeEventListener('scroll', this.handleScroll)
+  }
+
   render() {
     const renderStep = (anchorLinks: IAnchor[]) =>
       anchorLinks.map((o) => {
