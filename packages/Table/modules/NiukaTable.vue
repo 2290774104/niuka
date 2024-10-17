@@ -109,10 +109,6 @@ export default class NiukaTable extends Vue {
     ];
   }
 
-  created() {
-    console.log(this.height);
-  }
-
   render(h: CreateElement) {
     // 移除表格高度，表格高度使用指令计算，避免高度冲突
     const attrs = omit(this.$attrs, ['height']);
