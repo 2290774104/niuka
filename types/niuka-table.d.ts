@@ -1,4 +1,5 @@
-import { NiukaComponents } from './component';
+import type { ElTable } from 'element-ui/types/table';
+import type { ElTableColumn } from 'element-ui/types/table-column';
 
 export declare interface IData {
   [key: string]: any;
@@ -42,9 +43,9 @@ export declare interface IPagination {
   background?: boolean;
 }
 
-export declare class NiukaTable extends NiukaComponents {
+export declare class NiukaTable extends ElTable {
   data: IData[];
-  columns: IColumn[];
+  columns: IColumn[] | ElTableColumn[];
   pagination: boolean | IPagination;
   total: number;
 }
