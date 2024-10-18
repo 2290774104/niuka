@@ -58,11 +58,6 @@ export default class NiukaAnchor extends Vue {
     this.abbreviate = !this.abbreviate;
   }
 
-  @Watch('list', { deep: true, immediate: true })
-  listChange(newVal) {
-    console.log(newVal);
-  }
-
   private handleClickItem(item: IAnchor) {
     scrollTo({
       top: (document.querySelector(`#${item.link}`) as HTMLElement).offsetTop,
