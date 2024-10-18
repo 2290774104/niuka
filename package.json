@@ -27,6 +27,7 @@
     "vuepress-plugin-typescript": "^0.3.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.10",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.79.4",

@@ -36,7 +36,7 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
       },
       outDir: 'niuka-components',
       rollupOptions: {
-        external: ['vue'],
+        external: ['vue', 'lodash'],
         plugins: [
           // copy 插件针对vite4封装，vite5中使用时会出现类型报错
           // @ts-ignore
