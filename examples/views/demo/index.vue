@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import router from '@/router'
+import router from '@/router';
 
 declare interface IComponent {
   name: string;
@@ -22,9 +22,13 @@ declare interface IComponent {
 @Component({ name: 'HomePage' })
 export default class HomePage extends Vue {
   public components: IComponent[] = [
-    { name: 'NiukaSteps', path: '/niukaSteps' },
-    { name: 'NiukaTable', path: '/niukaTable' },
+    // 表单组件
     { name: 'NiukaSwitch', path: '/niukaSwitch' },
+    { name: 'NiukaSelect', path: '/niukaSelect' },
+    // 数据展示
+    { name: 'NiukaTable', path: '/niukaTable' },
+    // 导航
+    { name: 'NiukaSteps', path: '/niukaSteps' },
     { name: 'NiukaAnchor', path: '/niukaAnchor' },
   ];
 

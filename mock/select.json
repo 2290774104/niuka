@@ -1,0 +1,11 @@
+{
+  "msg": "success",
+  "code": 200,
+  "data": [
+    { "label": "选项1", "value": "1" },
+    { "label": "选项2", "value": "2" },
+    { "label": "选项3", "value": "3" },
+    { "label": "隐藏", "value": "hidden", "hidden": true },
+    { "label": "禁用", "value": "disabled", "disabled": true }
+  ]
+}
