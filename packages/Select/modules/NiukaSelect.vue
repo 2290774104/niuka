@@ -36,7 +36,7 @@ export default class NiukaSelect extends Vue {
   // option 配置
   @Prop({
     type: Object,
-    default: () => ({ value: 'value', label: 'label', disabled: false }),
+    default: () => ({ value: 'value', label: 'label' }),
   })
   private readonly optionAttrs!: IOptionAttrs;
 
