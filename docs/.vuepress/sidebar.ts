@@ -24,7 +24,10 @@ const sidebar: SidebarConfig4Multiple = {
     {
       title: 'Form 表单组件',
       collapsable: true,
-      children: [{ title: 'Switch 开关', path: '/pages/components/switch' }],
+      children: [
+        { title: 'Switch 开关', path: '/pages/components/switch' },
+        { title: 'Select 下拉选择', path: '/pages/components/select' },
+      ],
     },
     {
       title: 'Data 数据展示',

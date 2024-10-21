@@ -3,6 +3,10 @@ import _Vue from 'vue';
 import NiukaSwitchBase from './NiukaSwitch/base.vue';
 import NiukaSwitchRemark from './NiukaSwitch/remark.vue';
 import NiukaSwitchSort from './NiukaSwitch/sort.vue';
+// 下拉选择demo
+import NiukaSelectBase from './NiukaSelect/base.vue'
+import NiukaSelectCustom from './NiukaSelect/custom.vue'
+import NiukaSelectPage from './NiukaSelect/page.vue'
 // 表格demo
 import NiukaTableBase from './NiukaTable/base.vue';
 import NiukaTablePage from './NiukaTable/page.vue';
@@ -21,6 +25,9 @@ const docsComponents: any = {
   NiukaSwitchBase,
   NiukaSwitchRemark,
   NiukaSwitchSort,
+  NiukaSelectBase,
+  NiukaSelectCustom,
+  NiukaSelectPage,
   NiukaTableBase,
   NiukaTablePage,
   NiukaTableAttributes,
