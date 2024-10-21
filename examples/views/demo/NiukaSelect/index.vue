@@ -62,8 +62,8 @@ export default class NiukaSelectView extends Vue {
 
   private createdOptions(params) {
     const data = [];
-    for (let index = 0; index < params.pageSize; index++) {
-      const i = (params.pageNo - 1) * params.pageSize + index + 1;
+    for (let index = 0; index < params.size; index++) {
+      const i = (params.page - 1) * params.size + index + 1;
       data.push({
         label: `选项${i}`,
         value: i,
