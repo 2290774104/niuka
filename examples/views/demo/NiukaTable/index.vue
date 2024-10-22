@@ -1,6 +1,22 @@
 <template>
   <div>
-    <niuka-table :data="data" :columns="columns" :pagination="pagination">
+    <div class="search mb10">
+      <el-form :inline="true" :model="search" class="demo-form-inline">
+        <el-form-item label="名称">
+          <el-input
+            v-model="search.name"
+            size="small"
+            placeholder="名称"
+          ></el-input>
+        </el-form-item>
+      </el-form>
+    </div>
+    <niuka-table
+      :data="data"
+      :columns="columns"
+      :pagination="pagination"
+      :key="key"
+    >
       <template #slot="{ column }">
         这里是自定义插槽：{{ column.prop }}
       </template>
@@ -15,6 +31,12 @@ import { IData, IColumn, IPagination } from 'component/Table/types';
 
 @Component({ name: 'NiukaTableView', components: { NiukaTable } })
 export default class NiukaTableView extends Vue {
+  public search = {
+    name: '',
+  };
+
+  public key = 1;
+
   public data: IData = [
     {
       title: '数据1',

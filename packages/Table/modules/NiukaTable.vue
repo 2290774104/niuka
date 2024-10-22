@@ -32,6 +32,9 @@ export default class NiukaTable extends Vue {
     | number
     | string;
 
+  // 是否在数据更新后重新布局el-table，可能能解决一些异常
+  @Prop({ type: Boolean, default: true }) readonly autoDoLayout?: boolean;
+
   private get tableInstance() {
     return this.$refs.ElTableRef as Table | any;
   }
@@ -107,6 +110,17 @@ export default class NiukaTable extends Vue {
         },
       },
     ];
+  }
+
+  // 处理 table 联动 el-form 时出现的表格跳动闪动问题
+  updated() {
+    if (
+      this.autoDoLayout &&
+      this.tableInstance &&
+      this.tableInstance.doLayout
+    ) {
+      this.tableInstance.doLayout();
+    }
   }
 
   render(h: CreateElement) {
