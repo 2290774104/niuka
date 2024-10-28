@@ -1,3 +1,7 @@
+/**
+ * @description 生成36位的uuid
+ * @returns {string} 生成的uuid
+ */
 export const uuid = () => {
   return 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     const r = (Math.random() * 16) | 0;
@@ -6,6 +10,12 @@ export const uuid = () => {
   });
 };
 
+/**
+ * @description 查询数组中最接近目标值的元素
+ * @param {number[]} arr 需要比对的数据集合
+ * @param {number} num 目标值
+ * @returns {number} 最接近目标值的元素
+ */
 export const findNearNum = (arr: number[], num: number) => {
   let index = 0; // 保存最接近数值在数组中的索引
   let d_value = Number.MAX_VALUE; // 保存差值绝对值，默认为最大数值
