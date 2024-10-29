@@ -21,6 +21,11 @@ const routes: Array<RouteConfig> = [
     name: 'NiukaSelect',
     component: () => import('@/views/demo/NiukaSelect/index.vue'),
   },
+  {
+    path: '/niukaTagsInput',
+    name: 'NiukaTagsInput',
+    component: () => import('@/views/demo/NiukaTagsInput/index.vue'),
+  },
   // 数据展示
   {
     path: '/niukaTable',

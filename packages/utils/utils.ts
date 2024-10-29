@@ -33,3 +33,21 @@ export const findNearNum = (arr: number[], num: number) => {
   }
   return arr[index]; // 返回最接近的数值
 };
+
+/**
+ * @description 去除字符串中的所有空格
+ * @param {string} str 需要去除空格的字符串
+ * @returns {string} 去除空格后的字符串
+ */
+export const trimAll = (str: string) => {
+  return str.replace(/\s/g, '');
+};
+
+/**
+ * @description 判断字符串是否由纯数字组成
+ * @param {string} str 需要判断的字符串
+ * @returns {boolean} 判断结果
+ */
+export const isNumeric = (str: string) => {
+  return /^\d+$/.test(str);
+};
