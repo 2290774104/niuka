@@ -27,7 +27,11 @@ export default class NiukaTagsInput extends Vue {
   @Watch('value', { immediate: true })
   valueChange(newVal: string) {
     if (newVal !== this.tags.join(' ')) {
-      this.tags = newVal.trim().split(' ');
+      if (this.value.length > 0) {
+        this.tags = newVal.trim().split(' ');
+      } else {
+        this.tags = []
+      }
     }
   }
 
