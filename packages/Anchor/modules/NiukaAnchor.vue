@@ -1,6 +1,6 @@
 <script lang="tsx">
 import { StyleValue } from 'vue';
-import '../style/index.scss';
+import '../styles/index.scss';
 import { findNearNum } from '../../utils';
 import type { IAnchor } from '../types';
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';

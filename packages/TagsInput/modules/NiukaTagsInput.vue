@@ -1,5 +1,5 @@
 <script lang="tsx">
-import '../style/index.scss';
+import '../styles/index.scss';
 import { StyleValue } from 'vue';
 import { trimAll, isNumeric } from '../../utils';
 import {

@@ -1,5 +1,5 @@
 <script lang="tsx">
-import '../style/index.scss';
+import '../styles/index.scss';
 import type { IInfo, ValueType } from '../types';
 import { Component, Emit, Model, Prop, Vue } from 'vue-property-decorator';
 
