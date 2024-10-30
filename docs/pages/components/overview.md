@@ -26,6 +26,7 @@ export default {
 			formList: [
 				{ name: 'Switch 开关', src: 'switch' },
 				{ name: 'Select 下拉选择', src: 'select' },
+				{ name: 'TagsInput 标签输入器', src: 'tags-input' },
 			],
 			dataList: [
 				{ name: 'Table 表格', src: 'table' },

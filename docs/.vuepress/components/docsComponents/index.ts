@@ -7,6 +7,10 @@ import NiukaSwitchSort from './NiukaSwitch/sort.vue';
 import NiukaSelectBase from './NiukaSelect/base.vue'
 import NiukaSelectCustom from './NiukaSelect/custom.vue'
 import NiukaSelectPage from './NiukaSelect/page.vue'
+// 标签输入器
+import NiukaTagsInputBase from './NiukaTagsInput/base.vue'
+import NiukaTagsInputNumber from './NiukaTagsInput/number.vue'
+import NiukaTagsInputValue from './NiukaTagsInput/value.vue'
 // 表格demo
 import NiukaTableBase from './NiukaTable/base.vue';
 import NiukaTablePage from './NiukaTable/page.vue';
@@ -28,6 +32,9 @@ const docsComponents: any = {
   NiukaSelectBase,
   NiukaSelectCustom,
   NiukaSelectPage,
+  NiukaTagsInputBase,
+  NiukaTagsInputNumber,
+  NiukaTagsInputValue,
   NiukaTableBase,
   NiukaTablePage,
   NiukaTableAttributes,
