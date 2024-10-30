@@ -14,9 +14,9 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
       alias: [
         { find: '@', replacement: resolve(__dirname, './examples/') },
         { find: 'component', replacement: resolve(__dirname, './packages/') },
-        // 
+        // 处理 element-ui 表格无法渲染的问题
         { find: 'vue', replacement: 'vue/dist/vue.esm.js' },
-        { find: '@http', replacement: resolve(__dirname, './http/index.ts') }
+        { find: '@http', replacement: resolve(__dirname, './http/index.ts') },
       ],
     },
     build: {
@@ -36,7 +36,16 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
       },
       outDir: 'niuka-components',
       rollupOptions: {
-        external: ['vue', 'lodash'],
+        // 打包时移除外部依赖
+        external: ['vue', 'lodash', 'element-ui'],
+        output: {
+          // 外部依赖全局别名
+          globals: {
+            vue: 'vue',
+            lodash: '_',
+            'element-ui': 'ELEMENT',
+          },
+        },
         plugins: [
           // copy 插件针对vite4封装，vite5中使用时会出现类型报错
           // @ts-ignore
