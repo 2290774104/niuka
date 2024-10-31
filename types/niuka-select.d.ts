@@ -41,4 +41,5 @@ export declare class NiukaSelect extends ElSelect {
   pageField?: string;
   sizeField?: string;
   resultField?: string;
+  defaultOption?: IOption[];
 }

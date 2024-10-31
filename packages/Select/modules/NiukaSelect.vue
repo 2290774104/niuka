@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { omit } from 'lodash';
+import { cloneDeep, omit } from 'lodash';
 import '../directive/load-more';
 import {
   Component,
@@ -82,6 +82,10 @@ export default class NiukaSelect extends Vue {
   @Prop({ type: String, default: 'data' })
   private readonly resultField!: string;
 
+  // 默认下拉选项
+  @Prop({ type: Array, default: () => [] })
+  private readonly defaultOption!: IOption[];
+
   get getOptions(): IOption[] {
     return this.dataType === 'custom' ? this.apiOptions : this.options;
   }
@@ -90,6 +94,15 @@ export default class NiukaSelect extends Vue {
   netWorkChange() {
     this.apiOptions = [];
     this.pageNo = 1;
+    // 有默认下拉选项且选项中值不为空，则使用默认下拉选项
+    if (this.defaultOption.length > 0) {
+      if (
+        !this.defaultOption.map((o) => o[this.optionAttrs.value]).includes('')
+      ) {
+        this.apiOptions = cloneDeep(this.defaultOption);
+        return;
+      }
+    }
     this.getOption();
   }
 
@@ -123,6 +136,11 @@ export default class NiukaSelect extends Vue {
     } catch (err) {
       console.log(err);
     }
+  }
+
+  public setOption(option: IOption[]) {
+    this.apiOptions = option;
+    this.updataOption(option);
   }
 
   @Emit('updata-option')
