@@ -86,11 +86,18 @@ export default class AttributeTable extends Vue {
     { label: '说明', prop: 'dec', align: 'left' },
   ];
 
+  public methodsColumns: IColumn[] = [
+    { label: '名称', prop: 'name', align: 'left' },
+    { label: '说明', prop: 'dec', align: 'left' },
+    { label: '类型', prop: 'type', customRender: 'type', align: 'left' },
+  ];
+
   public get columns(): IColumn[] {
     const map = {
       attribute: this.attributeColumns,
       event: this.eventColumns,
       slot: this.slotColumns,
+      methods: this.methodsColumns,
     };
     return map[this.type];
   }

@@ -51,6 +51,10 @@ description: 下拉选择组件
 
 <attribute-table :data="niukaSelectEvents" type="event"></attribute-table>
 
+## NiukaSelect Methods
+
+<attribute-table :data="niukaSelectMethods" type="methods"></attribute-table>
+
 ## OptionAttrs Attributes
 
 <attribute-table :data="optionAttrs"></attribute-table>
@@ -81,12 +85,16 @@ description: 下拉选择组件
           { name: 'page-field', dec: '分页页码字段', type: 'string', default: 'page' },
           { name: 'size-field', dec: '分页单页数量字段', type: 'string', default: 'size' },
           { name: 'result-field', dec: '远端获取数据取值字段', type: 'string', default: 'data' },
+          { name: 'default-option', dec: '远程获取时的默认字段(用于编辑时反显)', type: 'link:Option[]:#option-attributes' },
           { name: '...', dec: '其他 el-select 属性，参考 element 文档', type: 'link:table-attributes:https://element.eleme.cn/#/zh-CN/component/select#select-attributes' }
         ],
         niukaSelectEvents: [
           { name: 'updata-option', dec: '从远端获取的下拉选项变更后', type: 'Function:(Option[]) => void' },
           { name: 'change', dec: '下拉选项变更事件', type: 'Function:({ value, Option[] }) => void' },
           { name: '...', dec: '其他 el-select 事件，参考 element 文档', type: 'link:table-events:https://element.eleme.cn/#/zh-CN/component/select#select-events' }
+        ],
+        niukaSelectMethods: [
+          { name: 'setOption', dec: '手动设置下拉选项', type: 'Function:(Option[]) => void' },
         ],
         optionAttrs: [
           { name: 'value', dec: '下拉数据中 value 对应字段', type: 'string', default: 'value' },
