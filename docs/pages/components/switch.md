@@ -77,6 +77,7 @@ description: 开关组件
           { name: 'sort-key', dec: 'info 中代表序号的字段', type: 'string', default: 'sort' },
           { name: 'show-remark', dec: '是否显示备注区域', type: 'boolean', default: 'false' },
           { name: 'user-edit', dec: '是否显示编辑按钮', type: 'boolean', default: 'false' },
+          { name: 'disabled', dec: '是否禁用开关', type: 'boolean', default: 'false' },
         ],
         niukaSwitchEvents: [
           { name: 'change', dec: '开关状态发生变化', type: 'Function:(value) => void' },
