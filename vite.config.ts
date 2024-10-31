@@ -41,7 +41,7 @@ export default defineConfig((env: ConfigEnv): UserConfig => {
         output: {
           // 外部依赖全局别名
           globals: {
-            vue: 'vue',
+            vue: 'Vue',
             lodash: '_',
             'element-ui': 'ELEMENT',
           },
