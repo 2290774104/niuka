@@ -18,4 +18,5 @@ export declare class NiukaSwitch extends NiukaComponents {
   userEdit?: boolean;
   showSort?: boolean;
   sortKey?: string;
+  disabled?: boolean;
 }

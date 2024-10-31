@@ -33,6 +33,8 @@ export default class NiukaSwitch extends Vue {
   // 按钮信息中用在排序的字段
   @Prop({ type: String, default: 'sort' }) readonly sortKey!: string;
 
+  @Prop({ type: Boolean, default: false }) readonly disabled!: boolean;
+
   // 更新 v-model
   @Emit('change')
   private handleChange(value: ValueType) {
@@ -55,14 +57,11 @@ export default class NiukaSwitch extends Vue {
           {this.info[this.labelKey]}
           <el-switch
             value={this.value}
-            {...{
-              props: {
-                activeValue: this.info.activeValue,
-                inactiveValue: this.info.inactiveValue,
-                activeColor: this.activeColor,
-                inactiveColor: this.inactiveColor,
-              },
-            }}
+            activeValue={this.info.activeValue}
+            inactiveValue={this.info.inactiveValue}
+            activeColor={this.activeColor}
+            inactiveColor={this.inactiveColor}
+            disabled={this.disabled}
             {...{
               on: {
                 change: this.handleChange,

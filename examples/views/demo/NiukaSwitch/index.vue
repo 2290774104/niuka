@@ -8,6 +8,7 @@
       showRemark
       userEdit
       showSort
+      disabled
     >
       <template slot="remark"> remark测试 </template>
     </niuka-switch>
@@ -21,7 +22,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component({ name: 'NiukaSwitchView', components: { NiukaSwitch } })
 export default class NiukaSwitchView extends Vue {
-  public value = 2;
+  public value = '1';
 
   public info = {
     label: '开关label',
@@ -35,7 +36,7 @@ export default class NiukaSwitchView extends Vue {
   }
 
   public handleEdit() {
-    Message.info('点击了编辑按钮')
+    Message.info('点击了编辑按钮');
   }
 }
 </script>
