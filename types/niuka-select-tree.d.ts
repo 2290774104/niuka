@@ -16,6 +16,7 @@ export declare class NiukaSelectTree extends NiukaComponents {
   data: TreeData[];
   props?: IProps;
   multiple?: boolean;
+  filterable?: boolean;
   selectLeaf?: boolean;
   clickToSelected?: boolean;
 }
