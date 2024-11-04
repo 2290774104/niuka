@@ -1,0 +1,16 @@
+.niuka-select-tree {
+  width: 100%;
+}
+
+.niuka-select-tree-popper {
+  .tree-option {
+    padding: 0;
+    height: auto;
+  }
+
+  .leaf-tree {
+    .el-tree-node__expand-icon:not(.is-leaf) + .el-checkbox {
+      display: none;
+    }
+  }
+}

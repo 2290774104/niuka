@@ -2,6 +2,7 @@ import _Vue, { PluginFunction } from 'vue';
 import NiukaSwitch from './Switch';
 import NiukaSelect from './Select';
 import NiukaTagsInput from './TagsInput';
+import NiukaSelectTree from './SelectTree';
 import NiukaTable from './Table';
 import NiukaSteps from './Steps';
 import NiukaAnchor from './Anchor';
@@ -13,6 +14,7 @@ const components = [
   NiukaSwitch,
   NiukaSelect,
   NiukaTagsInput,
+  NiukaSelectTree,
   // Data 数据展示
   NiukaTable,
   // Navigation 导航
@@ -52,6 +54,7 @@ export {
   NiukaSwitch,
   NiukaSelect,
   NiukaTagsInput,
+  NiukaSelectTree,
   // Data 数据展示
   NiukaTable,
   // Navigation 导航
