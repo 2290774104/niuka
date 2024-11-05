@@ -28,6 +28,7 @@ const sidebar: SidebarConfig4Multiple = {
         { title: 'Switch 开关', path: '/pages/components/switch' },
         { title: 'Select 下拉选择', path: '/pages/components/select' },
         { title: 'TagsInput 标签输入器', path: '/pages/components/tags-input' },
+        { title: 'SelectTree 下拉选择树', path: '/pages/components/select-tree' },
       ],
     },
     {

@@ -4,13 +4,18 @@ import NiukaSwitchBase from './NiukaSwitch/base.vue';
 import NiukaSwitchRemark from './NiukaSwitch/remark.vue';
 import NiukaSwitchSort from './NiukaSwitch/sort.vue';
 // 下拉选择demo
-import NiukaSelectBase from './NiukaSelect/base.vue'
-import NiukaSelectCustom from './NiukaSelect/custom.vue'
-import NiukaSelectPage from './NiukaSelect/page.vue'
+import NiukaSelectBase from './NiukaSelect/base.vue';
+import NiukaSelectCustom from './NiukaSelect/custom.vue';
+import NiukaSelectPage from './NiukaSelect/page.vue';
 // 标签输入器
-import NiukaTagsInputBase from './NiukaTagsInput/base.vue'
-import NiukaTagsInputNumber from './NiukaTagsInput/number.vue'
-import NiukaTagsInputValue from './NiukaTagsInput/value.vue'
+import NiukaTagsInputBase from './NiukaTagsInput/base.vue';
+import NiukaTagsInputNumber from './NiukaTagsInput/number.vue';
+import NiukaTagsInputValue from './NiukaTagsInput/value.vue';
+// 下拉选择树demo
+import NiukaSelectTreeBase from './NiukaSelectTree/base.vue';
+import NiukaSelectTreeFilter from './NiukaSelectTree/filter.vue';
+import NiukaSelectTreeMultiple from './NiukaSelectTree/multiple.vue';
+import NiukaSelectTreeLeaf from './NiukaSelectTree/leaf.vue';
 // 表格demo
 import NiukaTableBase from './NiukaTable/base.vue';
 import NiukaTablePage from './NiukaTable/page.vue';
@@ -26,6 +31,7 @@ import NiukaAnchorAuto from './NiukaAnchor/auto.vue';
 import NiukaAnchorFixed from './NiukaAnchor/fixed.vue';
 
 const docsComponents: any = {
+  // 表单组件
   NiukaSwitchBase,
   NiukaSwitchRemark,
   NiukaSwitchSort,
@@ -35,10 +41,16 @@ const docsComponents: any = {
   NiukaTagsInputBase,
   NiukaTagsInputNumber,
   NiukaTagsInputValue,
+  NiukaSelectTreeBase,
+  NiukaSelectTreeFilter,
+  NiukaSelectTreeMultiple,
+  NiukaSelectTreeLeaf,
+  // 数据展示
   NiukaTableBase,
   NiukaTablePage,
   NiukaTableAttributes,
   NiukaTableSlot,
+  // 导航
   NiukaStepsBase,
   NiukaStepsIcon,
   NiukaStepsSpace,
