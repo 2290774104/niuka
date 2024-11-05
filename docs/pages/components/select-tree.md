@@ -53,6 +53,15 @@ description: 下拉选择树组件
   <<< @/docs/.vuepress/components/docsComponents/NiukaSelectTree/leaf.vue
 </preview-components>
 
+## 插槽
+
+内置 `before` 和 `after` 两个插槽，可以在选项树之前/后添加自定选项
+
+<preview-components>
+  <niuka-select-tree-slot slot="component"></niuka-select-tree-slot>
+  <<< @/docs/.vuepress/components/docsComponents/NiukaSelectTree/leaf.vue
+</preview-components>
+
 ## NiukaSelectTree Attributes
 
 <attribute-table :data="niukaSelectTreeAttributes"></attribute-table>
@@ -60,6 +69,10 @@ description: 下拉选择树组件
 ## NiukaSelectTree Events
 
 <attribute-table :data="niukaSelectTreeEvents" type="event"></attribute-table>
+
+## NiukaSelectTree Slots
+
+<attribute-table :data="niukaSelectTreeSlots" type="slot"></attribute-table>
 
 ## Props Attributes
 
@@ -81,6 +94,10 @@ description: 下拉选择树组件
 				niukaSelectTreeEvents: [
           { name: 'change', dec: '下拉选项变更事件', type: 'Function:(value) => void' },
 				],
+        niukaSelectTreeSlots: [
+          { name: 'before', dec: '下拉树选项之前' },
+          { name: 'after', dec: '下拉树选项之后' },
+        ],
 				propsAttributes: [
           { name: 'id', dec: '指定节点key和value为节点对象的某个属性值', type: 'string', default: 'id' },
           { name: 'label', dec: '指定节点标签为节点对象的某个属性值', type: 'string', default: 'label' },
