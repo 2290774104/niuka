@@ -184,6 +184,7 @@ export default class NiukaSelectTree extends Vue {
         filter-method={this.filterMethod}
         popper-class="niuka-select-tree-popper"
       >
+        {this.$slots.before}
         <el-option class="tree-option" value="tree">
           <el-tree
             ref="tree"
@@ -203,6 +204,7 @@ export default class NiukaSelectTree extends Vue {
               },
             }}
           ></el-tree>
+          {this.$slots.after}
         </el-option>
         {renderTreeItem(this.treeData)}
       </el-select>
