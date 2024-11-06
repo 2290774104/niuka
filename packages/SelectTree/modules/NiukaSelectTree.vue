@@ -31,7 +31,21 @@ export default class NiukaSelectTree extends Vue {
     return this.treeData.find((i) => i[this.idKey] === val);
   }
 
-  @Watch('selected')
+  // 监听用于数据回显
+  @Watch('value', { immediate: true, deep: true })
+  valueChange(newVal: ValueType) {
+    if (this.value.toString() !== this.selected.toString()) {
+      this.$nextTick(() => {
+        if (this.multiple) {
+          this.tree.setCheckedKeys(newVal as []);
+        } else {
+          this.tree.setCheckedKeys([newVal]);
+        }
+      });
+    }
+  }
+
+  @Watch('selected', { deep: true })
   selectedChange(newVal: ValueType) {
     this.updateValue(newVal);
   }
