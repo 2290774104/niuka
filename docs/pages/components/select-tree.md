@@ -74,6 +74,10 @@ description: 下拉选择树组件
 
 <attribute-table :data="niukaSelectTreeSlots" type="slot"></attribute-table>
 
+## NiukaSelectTree Methods
+
+<attribute-table :data="niukaSelectTreeMethods" type="methods"></attribute-table>
+
 ## Props Attributes
 
 <attribute-table :data="propsAttributes"></attribute-table>
@@ -93,10 +97,14 @@ description: 下拉选择树组件
         ],
 				niukaSelectTreeEvents: [
           { name: 'change', dec: '下拉选项变更事件', type: 'Function:(value) => void' },
+          { name: 'selected', dec: '数据选中时触发', type: 'Function:(data: TreeData) => void' },
 				],
         niukaSelectTreeSlots: [
           { name: 'before', dec: '下拉树选项之前' },
           { name: 'after', dec: '下拉树选项之后' },
+        ],
+        niukaSelectTreeMethods: [
+          { name: 'setCheckedKeys', dec: '通过 keys 设置下拉树勾选的节点', type: 'Function:(keys: string[]) => void' },
         ],
 				propsAttributes: [
           { name: 'id', dec: '指定节点key和value为节点对象的某个属性值', type: 'string', default: 'id' },

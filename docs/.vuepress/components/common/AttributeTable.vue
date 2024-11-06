@@ -63,7 +63,8 @@ export default class AttributeTable extends Vue {
   @Prop({ type: String, default: 'attribute' }) readonly type!:
     | 'attribute'
     | 'event'
-    | 'slot';
+    | 'slot'
+    | 'methods';
 
   // @ts-ignore
   @Prop({ type: Array, default: () => [] }) readonly data!: IData[];
