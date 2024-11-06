@@ -138,8 +138,13 @@ export default class NiukaSelectTree extends Vue {
   private handleCheck(data: TreeData, check: Check) {
     this.tree.setCheckedKeys([]);
     this.$nextTick(() => {
-      this.tree.setCheckedKeys(check.checkedKeys);
-      this.selected = check.checkedKeys;
+      if (this.multiple) {
+        this.tree.setCheckedKeys(check.checkedKeys);
+        this.selected = check.checkedKeys;
+      } else {
+        this.tree.setCheckedKeys([data[this.idKey]])
+        this.selected = data[this.idKey]
+      }
     });
   }
 
