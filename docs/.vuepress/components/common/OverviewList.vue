@@ -50,6 +50,7 @@ export default class OverviewList extends Vue {
 <style lang="styl" scoped>
 .el-card {
   cursor: pointer;
+  margin: 10px 0;
 
  ::v-deep .el-card__body {
     background-color: #F5F7FA;
