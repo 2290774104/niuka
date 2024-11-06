@@ -31,6 +31,11 @@ const routes: Array<RouteConfig> = [
     name: 'NiukaSelectTree',
     component: () => import('@/views/demo/NiukaSelectTree/index.vue'),
   },
+  {
+    path: '/niukaSelectColumn',
+    name: 'NiukaSelectColumn',
+    component: () => import('@/views/demo/NiukaSelectColumn/index.vue'),
+  },
   // 数据展示
   {
     path: '/niukaTable',

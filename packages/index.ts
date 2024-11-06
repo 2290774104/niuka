@@ -3,6 +3,7 @@ import NiukaSwitch from './Switch';
 import NiukaSelect from './Select';
 import NiukaTagsInput from './TagsInput';
 import NiukaSelectTree from './SelectTree';
+import NiukaSelectColumn from './SelectColumn';
 import NiukaTable from './Table';
 import NiukaSteps from './Steps';
 import NiukaAnchor from './Anchor';
@@ -15,6 +16,7 @@ const components = [
   NiukaSelect,
   NiukaTagsInput,
   NiukaSelectTree,
+  NiukaSelectColumn,
   // Data 数据展示
   NiukaTable,
   // Navigation 导航
@@ -55,6 +57,7 @@ export {
   NiukaSelect,
   NiukaTagsInput,
   NiukaSelectTree,
+  NiukaSelectColumn,
   // Data 数据展示
   NiukaTable,
   // Navigation 导航

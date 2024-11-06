@@ -27,6 +27,7 @@ export default class HomePage extends Vue {
     { name: 'NiukaSelect', path: '/niukaSelect' },
     { name: 'NiukaTagsInput', path: '/niukaTagsInput' },
     { name: 'NiukaSelectTree', path: '/niukaSelectTree' },
+    { name: 'NiukaSelectColumn', path: '/niukaSelectColumn' },
     // 数据展示
     { name: 'NiukaTable', path: '/niukaTable' },
     // 导航
