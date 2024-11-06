@@ -22,7 +22,13 @@ export default class NiukaSelectTree extends Vue {
 
   @Emit('change')
   updateValue(val: ValueType) {
+    this.handleSelected(val);
     return val;
+  }
+
+  @Emit('selected')
+  handleSelected(val: ValueType) {
+    return this.treeData.find((i) => i[this.idKey] === val);
   }
 
   @Watch('selected')
@@ -48,6 +54,9 @@ export default class NiukaSelectTree extends Vue {
 
   // 节点点击时是否选中节点
   @Prop({ type: Boolean, default: true }) private clickToSelected!: boolean;
+
+  // 隐藏域中需要过滤的选项
+  @Prop({ type: Array, default: () => [] }) private filterHide!: string[];
 
   private selected: string | string[] = this.multiple ? [] : '';
 
@@ -165,15 +174,17 @@ export default class NiukaSelectTree extends Vue {
     ]);
 
     const renderTreeItem = (data: TreeData[]) =>
-      data.map((i) => {
-        return (
-          <el-option
-            style="display: none;"
-            label={i.label}
-            value={i[this.idKey]}
-          ></el-option>
-        );
-      });
+      data
+        .filter((i) => !this.filterHide.includes(i[this.idKey]))
+        .map((i) => {
+          return (
+            <el-option
+              style="display: none;"
+              label={i.label}
+              value={i[this.idKey]}
+            ></el-option>
+          );
+        });
 
     return (
       <el-select
