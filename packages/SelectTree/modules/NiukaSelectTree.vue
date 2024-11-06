@@ -28,7 +28,7 @@ export default class NiukaSelectTree extends Vue {
 
   @Emit('selected')
   handleSelected(val: ValueType) {
-    return this.treeData.find((i) => i[this.idKey] === val);
+    return this.treeData.find((i) => i[this.idKey] === val) || val;
   }
 
   // 监听用于数据回显
@@ -179,12 +179,24 @@ export default class NiukaSelectTree extends Vue {
     this.tree.setCheckedKeys(this.selected as []);
   }
 
+  public setCheckedKeys(keys: string[]) {
+    this.$nextTick(() => {
+      this.tree.setCheckedKeys(keys);
+    });
+  }
+
   render() {
     const selectAttr = omit(this.$attrs, [
       'data',
       'props',
       'idKey',
       'filter-method',
+    ]);
+
+    const selectEvent = omit(this.$listeners, [
+      'remove-tag',
+      'change',
+      'selected',
     ]);
 
     const renderTreeItem = (data: TreeData[]) =>
@@ -204,7 +216,14 @@ export default class NiukaSelectTree extends Vue {
       <el-select
         class="niuka-select-tree"
         v-model={this.selected}
-        {...{ props: selectAttr, on: { 'remove-tag': this.removeTag } }}
+        {...{
+          props: selectAttr,
+          on: {
+            ...selectEvent,
+            change: this.updateValue,
+            'remove-tag': this.removeTag,
+          },
+        }}
         multiple={this.multiple}
         filter-method={this.filterMethod}
         popper-class="niuka-select-tree-popper"
