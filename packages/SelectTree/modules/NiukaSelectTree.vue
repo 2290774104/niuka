@@ -142,8 +142,8 @@ export default class NiukaSelectTree extends Vue {
         this.tree.setCheckedKeys(check.checkedKeys);
         this.selected = check.checkedKeys;
       } else {
-        this.tree.setCheckedKeys([data[this.idKey]])
-        this.selected = data[this.idKey]
+        this.tree.setCheckedKeys([data[this.idKey]]);
+        this.selected = data[this.idKey];
       }
     });
   }
@@ -168,7 +168,14 @@ export default class NiukaSelectTree extends Vue {
 
   // 下拉框输入查询关键字，触发树的过滤
   private filterMethod(val: string) {
+    this.handleFilter(val);
     (this.$refs.tree as Tree).filter(val);
+  }
+
+  // 更新查询字段
+  @Emit('filter')
+  handleFilter(value: string): string {
+    return value;
   }
 
   // 根据关键字过滤数据
