@@ -98,6 +98,7 @@ description: 下拉选择树组件
 				niukaSelectTreeEvents: [
           { name: 'change', dec: '下拉选项变更事件', type: 'Function:(value) => void' },
           { name: 'selected', dec: '数据选中时触发', type: 'Function:(data: TreeData) => void' },
+          { name: 'filter', dec: '查询条件变更', type: 'Function:(value: string) => void' },
 				],
         niukaSelectTreeSlots: [
           { name: 'before', dec: '下拉树选项之前' },
