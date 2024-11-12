@@ -11,6 +11,7 @@ import NiukaSelectTree from '../../SelectTree';
 import type { INetWork } from '../types';
 import type { TreeData } from 'element-ui/types/tree';
 import { Message } from 'element-ui';
+import { omit } from 'lodash';
 
 interface IData {
   catid: string;
@@ -49,6 +50,9 @@ export default class NiukaSelectColumn extends Vue {
   // 是否记录常用项
   @Prop({ type: Boolean, default: true })
   private readonly recently!: boolean;
+
+  @Prop({ type: Boolean, default: false })
+  private readonly filterable!: boolean;
 
   private selected: string = '';
 
@@ -139,13 +143,22 @@ export default class NiukaSelectColumn extends Vue {
     }
   }
 
+  private filter = '';
+
+  private handleFilter(value: string) {
+    this.filter = value;
+  }
+
   render() {
+    const attrs = omit(this.$attrs, ['netWork', 'resultField', 'recently']);
     const renderRecently = (options: IOption[]) => {
       return options.length > 0 ? (
         <el-option-group label="常用">
-          {options.map((o) => {
-            return <el-option label={o.label} value={o.value}></el-option>;
-          })}
+          {options
+            .filter((o) => o.label.includes(this.filter))
+            .map((o) => {
+              return <el-option label={o.label} value={o.value}></el-option>;
+            })}
         </el-option-group>
       ) : (
         ''
@@ -156,9 +169,13 @@ export default class NiukaSelectColumn extends Vue {
         ref="tree"
         v-model={this.selected}
         data={this.treeData}
+        {...{
+          props: attrs,
+          on: { selected: this.handleSelected, filter: this.handleFilter },
+        }}
+        filterable={this.filterable}
         select-leaf
         filter-hide={this.recentlyOptions.map((o) => o.value)}
-        {...{ on: { selected: this.handleSelected } }}
       >
         {this.recently ? (
           <template slot="before">

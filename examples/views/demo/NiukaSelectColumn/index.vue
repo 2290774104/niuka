@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>选中的值：{{ value }}</div>
-    <niuka-select-column v-model="value" :net-work="netWork"></niuka-select-column>
+    <niuka-select-column v-model="value" :net-work="netWork" filterable></niuka-select-column>
   </div>
 </template>
 
