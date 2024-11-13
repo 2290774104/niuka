@@ -10,4 +10,5 @@ export declare class NiukaSelectColumn extends NiukaComponents {
   netWork: INetWork;
   resultField?: string;
   recently?: boolean;
+  filterable?: boolean;
 }
