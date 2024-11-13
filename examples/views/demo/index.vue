@@ -43,4 +43,8 @@ export default class HomePage extends Vue {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.el-button {
+  margin: 0 10px 10px 0;
+}
+</style>
