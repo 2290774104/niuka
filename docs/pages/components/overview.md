@@ -28,6 +28,7 @@ export default {
 				{ name: 'Select 下拉选择', src: 'select' },
 				{ name: 'TagsInput 标签输入器', src: 'tags-input' },
 				{ name: 'SelectTree 下拉选择树', src: 'select-tree' },
+				{ name: 'SelectColumn 下拉选择栏目', src: 'select-column' },
 			],
 			dataList: [
 				{ name: 'Table 表格', src: 'table' },

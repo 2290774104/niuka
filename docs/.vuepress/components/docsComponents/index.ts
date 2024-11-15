@@ -17,6 +17,9 @@ import NiukaSelectTreeFilter from './NiukaSelectTree/filter.vue';
 import NiukaSelectTreeMultiple from './NiukaSelectTree/multiple.vue';
 import NiukaSelectTreeLeaf from './NiukaSelectTree/leaf.vue';
 import NiukaSelectTreeSlot from './NiukaSelectTree/slot.vue';
+// 下拉选择栏目demo
+import NiukaSelectColumnBase from './NiukaSelectColumn/base.vue'
+import NiukaSelectColumnFilter from './NiukaSelectColumn/filter.vue'
 // 表格demo
 import NiukaTableBase from './NiukaTable/base.vue';
 import NiukaTablePage from './NiukaTable/page.vue';
@@ -47,6 +50,8 @@ const docsComponents: any = {
   NiukaSelectTreeMultiple,
   NiukaSelectTreeLeaf,
   NiukaSelectTreeSlot,
+  NiukaSelectColumnBase,
+  NiukaSelectColumnFilter,
   // 数据展示
   NiukaTableBase,
   NiukaTablePage,

@@ -29,6 +29,7 @@ const sidebar: SidebarConfig4Multiple = {
         { title: 'Select 下拉选择', path: '/pages/components/select' },
         { title: 'TagsInput 标签输入器', path: '/pages/components/tags-input' },
         { title: 'SelectTree 下拉选择树', path: '/pages/components/select-tree' },
+        { title: 'SelectColumn 下拉选择栏目', path: '/pages/components/select-column' },
       ],
     },
     {
