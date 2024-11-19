@@ -42,6 +42,15 @@ description: 标签输入器
   <<< @/docs/.vuepress/components/docsComponents/NiukaTagsInput/value.vue
 </preview-components>
 
+## 组件禁用
+
+设置 `disabled` 属性，即可禁用组件，无法添加/删除标签
+
+<preview-components>
+  <niuka-tags-input-disabled slot="component"></niuka-tags-input-disabled>
+  <<< @/docs/.vuepress/components/docsComponents/NiukaTagsInput/disabled.vue
+</preview-components>
+
 ## NiukaTagsInput Attributes
 
 <attribute-table :data="niukaTagsInputAttributes"></attribute-table>
@@ -54,6 +63,7 @@ description: 标签输入器
           { name: 'check-number', dec: '创建标签时是否进行纯数字校验', type: 'boolean', default: false },
           { name: 'limit', dec: '可创建标签数量上限', type: 'number' },
           { name: 'no-input', dec: '不允许通过输入的方式创建标签', type: 'boolean', default: false },
+          { name: 'disabled', dec: '是否禁用组件', type: 'boolean', default: false },
         ],
       }
     }
