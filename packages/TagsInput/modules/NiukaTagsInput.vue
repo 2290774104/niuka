@@ -30,7 +30,7 @@ export default class NiukaTagsInput extends Vue {
       if (this.value.length > 0) {
         this.tags = newVal.trim().split(' ');
       } else {
-        this.tags = []
+        this.tags = [];
       }
     }
   }
@@ -41,6 +41,8 @@ export default class NiukaTagsInput extends Vue {
   @Prop({ type: Number }) private readonly limit!: number | undefined;
 
   @Prop({ type: Boolean, default: false }) private readonly noInput!: boolean;
+
+  @Prop({ type: Boolean, default: false }) private readonly disabled!: boolean;
 
   private get inputStyle(): StyleValue {
     return {
@@ -108,16 +110,22 @@ export default class NiukaTagsInput extends Vue {
     this.handleChange(this.tags.join(' '));
   }
 
+  private get inputTag(): HTMLElement {
+    return this.$refs.inputTag as HTMLElement;
+  }
+
   render() {
     const renderTags = (tags: string[]) =>
       tags.map((i) => {
         return (
           <div class="span-box">
             <span class="tag-span">{i}</span>
-            <i
-              class="el-icon-close"
-              {...{ on: { click: () => this.handleRemove(i) } }}
-            ></i>
+            {!this.disabled && (
+              <i
+                class="el-icon-close"
+                {...{ on: { click: () => this.handleRemove(i) } }}
+              ></i>
+            )}
           </div>
         );
       });
@@ -128,13 +136,13 @@ export default class NiukaTagsInput extends Vue {
         {...{
           on: {
             click: () => {
-              (this.$refs.inputTag as HTMLElement).focus();
+              if (this.inputTag) this.inputTag.focus();
             },
           },
         }}
       >
         {renderTags(this.tags)}
-        {!this.noInput && (
+        {!this.noInput && !this.disabled && (
           <input
             placeholder="输入后按<回车>创建"
             type="text"

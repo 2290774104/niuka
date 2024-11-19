@@ -5,7 +5,7 @@
     <niuka-tags-input v-model="value" check-number></niuka-tags-input>
     <niuka-tags-input v-model="value2" check-number></niuka-tags-input>
     <niuka-tags-input ref="tags1" v-model="value3"></niuka-tags-input>
-    <niuka-tags-input ref="tags2" v-model="value4"></niuka-tags-input>
+    <niuka-tags-input ref="tags2" v-model="value4" disabled></niuka-tags-input>
   </div>
 </template>
 
