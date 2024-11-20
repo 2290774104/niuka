@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { cloneDeep, omit } from 'lodash';
+import { cloneDeep, isArray, omit } from 'lodash';
 import '../directive/load-more';
 import {
   Component,
@@ -155,7 +155,19 @@ export default class NiukaSelect extends Vue {
     return {
       value: value,
       options: this.getOptions,
+      selected: this.getSelected(value),
     };
+  }
+
+  private getSelected(value: ValueType) {
+    const key = this.optionAttrs.value;
+    if (isArray(value)) {
+      return this.getOptions.filter((i) =>
+        (value as any[]).includes(i[this.optionAttrs.value])
+      );
+    } else {
+      return this.getOptions.find((i) => i[key] === value);
+    }
   }
 
   private loadMore() {

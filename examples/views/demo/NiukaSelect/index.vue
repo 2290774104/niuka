@@ -21,6 +21,8 @@
           :netWork="netWork2"
           filterable
           lazy
+          multiple
+          @change="handleChange"
         ></niuka-select>
         当前选中的值是：{{ value3 }}
       </div>
@@ -72,6 +74,10 @@ export default class NiukaSelectView extends Vue {
     return {
       data: data.filter((i) => i.label.includes(params.name)),
     };
+  }
+
+  public handleChange(data) {
+    console.log(data);
   }
 }
 </script>
