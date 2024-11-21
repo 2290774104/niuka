@@ -19,6 +19,7 @@
     "axios": "0.21.1",
     "element-ui": "^2.15.14",
     "lodash": "^4.17.21",
+    "sortablejs": "^1.15.3",
     "vue": "^2.7.16",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.6.5",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.17.10",
+    "@types/sortablejs": "^1.15.8",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.79.4",
