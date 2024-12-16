@@ -10,7 +10,7 @@ import {
   Vue,
   Watch,
 } from 'vue-property-decorator';
-import { Message } from 'element-ui';
+import { Message, MessageBox } from 'element-ui';
 
 @Component({ name: 'NiukaTagsInput' })
 export default class NiukaTagsInput extends Vue {
@@ -43,6 +43,10 @@ export default class NiukaTagsInput extends Vue {
   @Prop({ type: Boolean, default: false }) private readonly noInput!: boolean;
 
   @Prop({ type: Boolean, default: false }) private readonly disabled!: boolean;
+
+  @Prop({ type: Boolean, default: false }) private readonly removeDialog!: boolean;
+
+  @Prop({ type: String, default: '确认删除标签吗？' }) private readonly removeTips!: string;
 
   private get inputStyle(): StyleValue {
     return {
@@ -105,6 +109,21 @@ export default class NiukaTagsInput extends Vue {
   }
 
   private handleRemove(span: string) {
+    if (this.removeDialog) {
+      MessageBox.confirm(this.removeTips, '提示', {
+        confirmButtonText: '是',
+          cancelButtonText: '否',
+          type: 'warning'
+      }).then(() => {
+        this.removeTag(span)
+      }).catch(() => {});
+    } else {
+      this.removeTag(span)
+    }
+    
+  }
+
+  private removeTag(span: string) {
     const index = this.tags.indexOf(span);
     this.tags.splice(index, 1);
     this.handleChange(this.tags.join(' '));
