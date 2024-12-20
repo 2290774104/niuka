@@ -130,8 +130,10 @@ export default class NiukaSelect extends Vue {
         if (!this.lazy) {
           this.apiOptions = [];
         }
-        this.apiOptions = this.apiOptions.concat(res[this.resultField]);
-        this.updataOption(this.apiOptions);
+        if (res[this.resultField]) {
+          this.apiOptions = this.apiOptions.concat(res[this.resultField]);
+          this.updataOption(this.apiOptions);
+        }
       }
     } catch (err) {
       console.log(err);
