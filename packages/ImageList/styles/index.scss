@@ -1,4 +1,6 @@
 .niuka-image-list {
+  height: 100%;
+
   .el-col {
     margin-bottom: 20px;
   }
@@ -42,7 +44,19 @@
     }
   }
 
+  .el-row,
   .el-empty {
-    height: 456px;
+    // height: 456px;
+    overflow-y: auto;
+  }
+
+  .el-pagination {
+    margin-top: 10px;
+    text-align: right;
+    justify-content: flex-end;
+
+    .el-pagination__total {
+      margin-right: 0;
+    }
   }
 }

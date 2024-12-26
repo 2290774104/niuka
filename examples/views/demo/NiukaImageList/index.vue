@@ -1,7 +1,11 @@
 <template>
 	<div>
-		<niuka-image-list :data="data" :pagination="pagination"></niuka-image-list>
-		<niuka-image-list :data="[]" :pagination="pagination"></niuka-image-list>
+		<div class="wrap">
+			<niuka-image-list :data="data" :pagination="pagination"></niuka-image-list>
+		</div>
+		<div class="wrap">
+			<niuka-image-list :data="[]" :pagination="pagination"></niuka-image-list>
+		</div>
 	</div>
 </template>
 
@@ -62,4 +66,8 @@ export default class NiukaTableView extends Vue {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrap {
+	height: 800px;
+}
+</style>

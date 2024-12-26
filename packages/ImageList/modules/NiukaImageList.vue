@@ -1,5 +1,6 @@
 <script lang="tsx">
 import '../styles/index.scss';
+import '../directive/height-adaptive'
 import { omit } from 'lodash';
 import PagStore from '../store';
 import { CreateElement } from 'vue';
@@ -22,6 +23,11 @@ export default class NiukaImageList extends Vue {
   @Prop({ type: String, default: 'url' }) readonly urlKey!: string
 
   @Prop({ type: String, default: 'title' }) readonly titleKey!: string
+
+  // 组件高度，默认占满父级容器
+  @Prop({ type: [Number, String], default: '' }) readonly height?:
+    | number
+    | string;
 
   // 是否展示分页
   private isShowPag: boolean = false;
@@ -81,6 +87,18 @@ export default class NiukaImageList extends Vue {
     return this.data.map(i => i[this.urlKey])
   }
 
+  directives() {
+    return [
+      {
+        name: 'height-adaptive',
+        value: {
+          height: this.height,
+          bottomOffset: this.isShowPag ? 42 : 0,
+        },
+      },
+    ];
+  }
+
   render(h: CreateElement) {
     const renderList = (list: IData[]) => {
       const renderItem = (data: IData) => {
@@ -97,10 +115,10 @@ export default class NiukaImageList extends Vue {
         );
       };
 
-      return <el-row gutter={20}>{list.map((i) => renderItem(i))}</el-row>;
+      return <el-row gutter={20} {...{ directives: this.directives() }}>{list.map((i) => renderItem(i))}</el-row>;
     };
 
-    const renderEmpty = () => <el-empty description="暂无数据" />
+    const renderEmpty = () => <el-empty description="暂无数据" {...{ directives: this.directives() }} />
 
     return (
       <div class="niuka-image-list">
