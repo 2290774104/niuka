@@ -1,0 +1,48 @@
+.niuka-image-list {
+  .el-col {
+    margin-bottom: 20px;
+  }
+
+  .el-card {
+    padding: 0;
+
+    .el-card__body {
+      padding: 0;
+    }
+
+    &:hover {
+      background-color: #2293e6;
+      color: #fff;
+
+      .el-image {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .el-image {
+    width: 100%;
+    height: 208px;
+    transition: all 0.5s;
+  }
+
+  .title-wrap {
+    display: flex;
+    padding: 20px;
+
+    .title {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .operate {
+      flex-shrink: 0;
+    }
+  }
+
+  .el-empty {
+    height: 456px;
+  }
+}

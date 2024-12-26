@@ -4,6 +4,7 @@ import { NiukaTagsInput } from './niuka-tags-input';
 import { NiukaSelectTree } from './niuka-select-tree';
 import { NiukaSelectColumn } from './niuka-select-column';
 import { NiukaTable } from './niuka-table';
+import { NiukaImageList } from './niuka-image-list';
 import { NiukaSteps } from './niuka-steps';
 import { NiukaAnchor } from './niuka-anchor';
 
@@ -16,6 +17,7 @@ export {
   NiukaSelectColumn,
   // Data 数据展示
   NiukaTable,
+  NiukaImageList,
   // Navigation 导航
   NiukaSteps,
   NiukaAnchor,

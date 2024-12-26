@@ -43,9 +43,14 @@ const routes: Array<RouteConfig> = [
     component: () => import('@/views/demo/NiukaTable/index.vue'),
   },
   {
+    path: '/niukaImageList',
+    name: 'NiukaImageList',
+    component: () => import('@/views/demo/NiukaImageList/index.vue'),
+  },
+  {
     path: '/niukaImage',
     name: 'NiukaImage',
-    component: () => import('@/views/demo/NiukaImage/index.vue')
+    component: () => import('@/views/demo/NiukaImage/index.vue'),
   },
   // 导航
   {
