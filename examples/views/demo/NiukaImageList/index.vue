@@ -1,7 +1,11 @@
 <template>
 	<div>
 		<div class="wrap">
-			<niuka-image-list :data="data" :pagination="pagination"></niuka-image-list>
+			<niuka-image-list :data="data" :pagination="pagination">
+				<template #operate="data">
+					<div @click="handleOperate(data)">插槽</div>
+				</template>
+			</niuka-image-list>
 		</div>
 		<div class="wrap">
 			<niuka-image-list :data="[]" :pagination="pagination"></niuka-image-list>
@@ -13,6 +17,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import NiukaImageList from 'component/ImageList/modules/NiukaImageList.vue';
 import { IData, IPagination } from 'component/ImageList/types';
+import { Message } from 'element-ui';
 
 @Component({ name: 'NiukaTableView', components: { NiukaImageList } })
 export default class NiukaTableView extends Vue {
@@ -63,6 +68,11 @@ export default class NiukaTableView extends Vue {
 		currentPage: 1,
 		pageSize: 10,
 	};
+
+	handleOperate(data: any) {
+		console.log(data);
+		Message.info(data.url)
+	}
 }
 </script>
 

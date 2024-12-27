@@ -108,7 +108,7 @@ export default class NiukaImageList extends Vue {
               <el-image src={data[this.urlKey]} fit="contain" lazy preview-src-list={this.previewList}></el-image>
               <div class="title-wrap">
                 <div class="title">{data[this.titleKey]}</div>
-                <div class="operate">{this.$slots.operate}</div>
+                <div class="operate">{this.$scopedSlots.operate && this.$scopedSlots.operate(data)}</div>
               </div>
             </el-card>
           </el-col>
