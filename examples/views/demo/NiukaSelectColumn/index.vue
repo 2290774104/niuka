@@ -15,7 +15,7 @@ import { $get } from '@http';
   components: { NiukaSelectColumn },
 })
 export default class NiukaColumnView extends Vue {
-  public value = '';
+  public value = '5';
 
   public netWork = {
     method: () => $get('/mock/column.json'),

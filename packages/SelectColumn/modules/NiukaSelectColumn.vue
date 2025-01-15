@@ -67,6 +67,9 @@ export default class NiukaSelectColumn extends Vue {
       if (this.netWork.method) {
         const res = await this.netWork.method(this.netWork.params);
         this.treeData = this.initData(res[this.resultField]);
+        if (this.value) {
+          this.selected = this.value;
+        }
       }
     } catch (error) {
       Message.error(error);
