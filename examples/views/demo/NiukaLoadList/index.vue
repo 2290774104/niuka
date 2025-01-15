@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import NiukaLoadList from 'component/LoadList/modules/NiukaLoadList.vue';
+import NiukaLoadList from 'component/LoadList';
 
 @Component({ name: 'NiukaLoadListView', components: { NiukaLoadList } })
 export default class NiukaLoadListView extends Vue {
