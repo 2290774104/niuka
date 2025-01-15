@@ -6,6 +6,7 @@ import NiukaSelectTree from './SelectTree';
 import NiukaSelectColumn from './SelectColumn';
 import NiukaTable from './Table';
 import NiukaImageList from './ImageList'
+import NiukaLoadList from './LoadList'
 import NiukaSteps from './Steps';
 import NiukaAnchor from './Anchor';
 import { version } from '../package.json';
@@ -21,6 +22,7 @@ const components = [
   // Data 数据展示
   NiukaTable,
   NiukaImageList,
+  NiukaLoadList,
   // Navigation 导航
   NiukaSteps,
   NiukaAnchor,
@@ -63,6 +65,7 @@ export {
   // Data 数据展示
   NiukaTable,
   NiukaImageList,
+  NiukaLoadList,
   // Navigation 导航
   NiukaSteps,
   NiukaAnchor,

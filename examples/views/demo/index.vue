@@ -31,6 +31,7 @@ export default class HomePage extends Vue {
     // 数据展示
     { name: 'NiukaTable', path: '/niukaTable' },
     { name: 'NiukaImageList', path: '/niukaImageList' },
+    { name: 'NiukaLoadList', path: '/niukaLoadList' },
     { name: 'NiukaImage', path: '/niukaImage' },
     // 导航
     { name: 'NiukaSteps', path: '/niukaSteps' },

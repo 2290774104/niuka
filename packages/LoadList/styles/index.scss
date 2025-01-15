@@ -1,0 +1,13 @@
+.niuka-load-list {
+  height: 100%;
+  overflow-y: auto;
+
+  .loading,
+  .end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    line-height: 30px;
+  }
+}

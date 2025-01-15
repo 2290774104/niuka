@@ -48,6 +48,11 @@ const routes: Array<RouteConfig> = [
     component: () => import('@/views/demo/NiukaImageList/index.vue'),
   },
   {
+    path: '/niukaLoadList',
+    name: 'NiukaLoadList',
+    component: () => import('@/views/demo/NiukaLoadList/index.vue'),
+  },
+  {
     path: '/niukaImage',
     name: 'NiukaImage',
     component: () => import('@/views/demo/NiukaImage/index.vue'),
