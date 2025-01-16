@@ -68,6 +68,11 @@ const routes: Array<RouteConfig> = [
     name: 'NiukaAnchor',
     component: () => import('@/views/demo/NiukaAnchor/index.vue'),
   },
+  {
+    path: '/niukaContextmenu',
+    name: 'NiukaContextmenu',
+    component: () => import('@/views/demo/NiukaContextmenu/index.vue'),
+  },
 ];
 
 const router = new VueRouter({

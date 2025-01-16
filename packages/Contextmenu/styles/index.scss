@@ -1,0 +1,17 @@
+.niuka-contextmenu {
+  position: fixed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 0 none;
+  width: 150px;
+  z-index: 9999;
+
+  .el-menu {
+    border: 0 none;
+  }
+
+  .el-menu-item,
+  .el-submenu__title {
+    height: 35px;
+    line-height: 35px;
+  }
+}

@@ -36,6 +36,7 @@ export default class HomePage extends Vue {
     // 导航
     { name: 'NiukaSteps', path: '/niukaSteps' },
     { name: 'NiukaAnchor', path: '/niukaAnchor' },
+    { name: 'NiukaContextmenu', path: '/niukaContextmenu' },
   ];
 
   public handleClick(component: IComponent) {
