@@ -15,6 +15,10 @@ const sidebar: SidebarConfig4Multiple = {
   ],
   '/pages/components/': [
     {
+      title: '更新日志',
+      path: 'changelog'
+    },
+    {
       title: 'Overview 组件总览',
       collapsable: false,
       children: [
