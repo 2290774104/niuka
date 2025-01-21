@@ -12,6 +12,7 @@ import NiukaTagsInputBase from './NiukaTagsInput/base.vue';
 import NiukaTagsInputNumber from './NiukaTagsInput/number.vue';
 import NiukaTagsInputValue from './NiukaTagsInput/value.vue';
 import NiukaTagsInputDisabled from './NiukaTagsInput/disabled.vue';
+import NiukaTagsInputRemove from './NiukaTagsInput/remove.vue';
 // 下拉选择树demo
 import NiukaSelectTreeBase from './NiukaSelectTree/base.vue';
 import NiukaSelectTreeFilter from './NiukaSelectTree/filter.vue';
@@ -47,6 +48,7 @@ const docsComponents: any = {
   NiukaTagsInputNumber,
   NiukaTagsInputValue,
   NiukaTagsInputDisabled,
+  NiukaTagsInputRemove,
   NiukaSelectTreeBase,
   NiukaSelectTreeFilter,
   NiukaSelectTreeMultiple,

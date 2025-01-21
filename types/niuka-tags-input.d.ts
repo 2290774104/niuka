@@ -5,4 +5,5 @@ export declare class NiukaTagsInput extends NiukaComponents {
   limit?: number;
   noInput?: boolean;
   disabled?: boolean;
+  removeDialog?: boolean;
 }

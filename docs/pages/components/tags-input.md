@@ -51,6 +51,15 @@ description: 标签输入器
   <<< @/docs/.vuepress/components/docsComponents/NiukaTagsInput/disabled.vue
 </preview-components>
 
+## 删除提示框
+
+设置 `remove-dialog` 属性，在点击删除时会出现提示框，点击确认后删除标签
+
+<preview-components>
+  <niuka-tags-input-remove slot="component"></niuka-tags-input-remove>
+  <<< @/docs/.vuepress/components/docsComponents/NiukaTagsInput/remove.vue
+</preview-components>
+
 ## NiukaTagsInput Attributes
 
 <attribute-table :data="niukaTagsInputAttributes"></attribute-table>
