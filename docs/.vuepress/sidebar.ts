@@ -5,12 +5,12 @@ const sidebar: SidebarConfig4Multiple = {
     {
       title: '安装',
       collapsable: false,
-      path: '/pages/guide/installation',
+      path: 'installation',
     },
     {
       title: '快速开始',
       collapsable: false,
-      path: '/pages/guide/quickstart',
+      path: 'quickstart',
     },
   ],
   '/pages/components/': [
@@ -22,31 +22,31 @@ const sidebar: SidebarConfig4Multiple = {
       title: 'Overview 组件总览',
       collapsable: false,
       children: [
-        { title: 'Overview 组件总览', path: '/pages/components/overview' },
+        { title: 'Overview 组件总览', path: 'overview' },
       ],
     },
     {
       title: 'Form 表单组件',
       collapsable: true,
       children: [
-        { title: 'Switch 开关', path: '/pages/components/switch' },
-        { title: 'Select 下拉选择', path: '/pages/components/select' },
-        { title: 'TagsInput 标签输入器', path: '/pages/components/tags-input' },
-        { title: 'SelectTree 下拉选择树', path: '/pages/components/select-tree' },
-        { title: 'SelectColumn 下拉选择栏目', path: '/pages/components/select-column' },
+        { title: 'Switch 开关', path: 'switch' },
+        { title: 'Select 下拉选择', path: 'select' },
+        { title: 'TagsInput 标签输入器', path: 'tags-input' },
+        { title: 'SelectTree 下拉选择树', path: 'select-tree' },
+        { title: 'SelectColumn 下拉选择栏目', path: 'select-column' },
       ],
     },
     {
       title: 'Data 数据展示',
       collapsable: true,
-      children: [{ title: 'Table 表格', path: '/pages/components/table' }],
+      children: [{ title: 'Table 表格', path: 'table' }],
     },
     {
       title: 'Navigation 导航',
       collapsable: true,
       children: [
-        { title: 'Steps 步骤条', path: '/pages/components/steps' },
-        { title: 'Anchor 锚点', path: '/pages/components/anchor' },
+        { title: 'Steps 步骤条', path: 'steps' },
+        { title: 'Anchor 锚点', path: 'anchor' },
       ],
     },
   ],
