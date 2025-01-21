@@ -16,14 +16,12 @@ const sidebar: SidebarConfig4Multiple = {
   '/pages/components/': [
     {
       title: '更新日志',
-      path: 'changelog'
+      path: 'changelog',
     },
     {
       title: 'Overview 组件总览',
       collapsable: false,
-      children: [
-        { title: 'Overview 组件总览', path: 'overview' },
-      ],
+      children: [{ title: 'Overview 组件总览', path: 'overview' }],
     },
     {
       title: 'Form 表单组件',
@@ -39,7 +37,10 @@ const sidebar: SidebarConfig4Multiple = {
     {
       title: 'Data 数据展示',
       collapsable: true,
-      children: [{ title: 'Table 表格', path: 'table' }],
+      children: [
+        { title: 'Table 表格', path: 'table' },
+        { title: 'ImageList 图片列表', path: 'image-list' },
+      ],
     },
     {
       title: 'Navigation 导航',

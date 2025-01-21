@@ -27,6 +27,8 @@ import NiukaTableBase from './NiukaTable/base.vue';
 import NiukaTablePage from './NiukaTable/page.vue';
 import NiukaTableAttributes from './NiukaTable/attributes.vue';
 import NiukaTableSlot from './NiukaTable/slot.vue';
+// 图片列表demo
+import NiukaImageListBase from './NiukaImageList/base.vue'
 // 步骤条demo
 import NiukaStepsBase from './NiukaSteps/base.vue';
 import NiukaStepsIcon from './NiukaSteps/icon.vue';
@@ -61,6 +63,7 @@ const docsComponents: any = {
   NiukaTablePage,
   NiukaTableAttributes,
   NiukaTableSlot,
+  NiukaImageListBase,
   // 导航
   NiukaStepsBase,
   NiukaStepsIcon,
