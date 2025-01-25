@@ -32,7 +32,7 @@ export default {
 			],
 			dataList: [
 				{ name: 'Table 表格', src: 'table' },
-				{ name: 'ImageList 图片列表', src: 'tags-input' },
+				{ name: 'ImageList 图片列表', src: 'image-list' },
 			],
 			navigationList: [
 				{ name: 'Steps 步骤条', src: 'steps' },
