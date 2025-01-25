@@ -2,9 +2,6 @@
   <div>
     <div class="wrap">
       <niuka-image-list :data="data" :pagination="pagination" :total="8">
-        <template #operate="data">
-          <div @click="handleOperate(data)">插槽</div>
-        </template>
       </niuka-image-list>
     </div>
   </div>

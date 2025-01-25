@@ -25,6 +25,15 @@ description: 图片列表组件
   <<< @/docs/.vuepress/components/docsComponents/NiukaImageList/base.vue
 </preview-components>
 
+## 插槽
+
+使用具名插槽 `operate` ，设置右下区域操作栏
+
+<preview-components>
+  <niuka-image-list-slot slot="component"></niuka-image-list-slot>
+  <<< @/docs/.vuepress/components/docsComponents/NiukaImageList/slot.vue
+</preview-components>
+
 ## NiukaImageList Attributes
 
 <attribute-table :data="niukaImageListAttributes"></attribute-table>
