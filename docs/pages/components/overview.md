@@ -33,6 +33,7 @@ export default {
 			dataList: [
 				{ name: 'Table 表格', src: 'table' },
 				{ name: 'ImageList 图片列表', src: 'image-list' },
+				{ name: 'LoadList 懒加载列表', src: 'load-list' },
 			],
 			navigationList: [
 				{ name: 'Steps 步骤条', src: 'steps' },

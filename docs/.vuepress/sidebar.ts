@@ -40,6 +40,7 @@ const sidebar: SidebarConfig4Multiple = {
       children: [
         { title: 'Table 表格', path: 'table' },
         { title: 'ImageList 图片列表', path: 'image-list' },
+        { title: 'LoadList 懒加载列表', path: 'load-list' },
       ],
     },
     {

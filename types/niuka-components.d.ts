@@ -5,6 +5,7 @@ import { NiukaSelectTree } from './niuka-select-tree';
 import { NiukaSelectColumn } from './niuka-select-column';
 import { NiukaTable } from './niuka-table';
 import { NiukaImageList } from './niuka-image-list';
+import { NiukaLoadList } from './niuka-load-list'
 import { NiukaSteps } from './niuka-steps';
 import { NiukaAnchor } from './niuka-anchor';
 
@@ -18,6 +19,7 @@ export {
   // Data 数据展示
   NiukaTable,
   NiukaImageList,
+  NiukaLoadList,
   // Navigation 导航
   NiukaSteps,
   NiukaAnchor,
