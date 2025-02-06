@@ -7,6 +7,7 @@ import NiukaSelectColumn from './SelectColumn';
 import NiukaTable from './Table';
 import NiukaImageList from './ImageList'
 import NiukaLoadList from './LoadList'
+import NiukaDraggable from './Draggable'
 import NiukaSteps from './Steps';
 import NiukaAnchor from './Anchor';
 import NiukaContextmenu from './Contextmenu'
@@ -24,6 +25,7 @@ const components = [
   NiukaTable,
   NiukaImageList,
   NiukaLoadList,
+  NiukaDraggable,
   // Navigation 导航
   NiukaSteps,
   NiukaAnchor,

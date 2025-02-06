@@ -73,6 +73,12 @@ const routes: Array<RouteConfig> = [
     name: 'NiukaContextmenu',
     component: () => import('@/views/demo/NiukaContextmenu/index.vue'),
   },
+  // 其他
+  {
+    path: '/niukaDraggable',
+    name: 'NiukaDraggable',
+    component: () => import('@/views/demo/NiukaDraggable/index.vue'),
+  },
 ];
 
 const router = new VueRouter({
