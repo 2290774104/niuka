@@ -49,6 +49,7 @@ const sidebar: SidebarConfig4Multiple = {
       children: [
         { title: 'Steps 步骤条', path: 'steps' },
         { title: 'Anchor 锚点', path: 'anchor' },
+        { title: 'Contextmenu 右键菜单', path: 'contextmenu' },
       ],
     },
   ],

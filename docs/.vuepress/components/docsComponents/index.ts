@@ -40,6 +40,8 @@ import NiukaStepsSpace from './NiukaSteps/space.vue';
 import NiukaAnchorBase from './NiukaAnchor/base.vue';
 import NiukaAnchorAuto from './NiukaAnchor/auto.vue';
 import NiukaAnchorFixed from './NiukaAnchor/fixed.vue';
+// 右键菜单demo
+import NiukaContextmenuBase from './NiukaContextmenu/base.vue';
 
 const docsComponents: any = {
   // 表单组件
@@ -76,6 +78,7 @@ const docsComponents: any = {
   NiukaAnchorBase,
   NiukaAnchorAuto,
   NiukaAnchorFixed,
+  NiukaContextmenuBase,
 };
 
 export default {

@@ -38,6 +38,7 @@ export default {
 			navigationList: [
 				{ name: 'Steps 步骤条', src: 'steps' },
 				{ name: 'Anchor 锚点', src: 'anchor' },
+				{ name: 'Contextmenu 右键菜单', src: 'contextmenu' },
 			]
 		}
 	}
