@@ -10,7 +10,7 @@ export declare interface IMenu {
   event: string;
 }
 
-export declare class NiukaImageList extends NiukaComponents {
+export declare class NiukaContextmenu extends NiukaComponents {
   menus: IMenu[];
   carrier?: string;
 }

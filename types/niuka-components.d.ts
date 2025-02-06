@@ -8,6 +8,7 @@ import { NiukaImageList } from './niuka-image-list';
 import { NiukaLoadList } from './niuka-load-list'
 import { NiukaSteps } from './niuka-steps';
 import { NiukaAnchor } from './niuka-anchor';
+import { NiukaContextmenu } from './niuka-contextmenu'
 
 export {
   // Form 表单组件
