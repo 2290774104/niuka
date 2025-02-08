@@ -7,6 +7,7 @@ import PreviewComponents from './components/common/PreviewComponents.vue';
 import AttributeTable from './components/common/AttributeTable.vue';
 
 import docsComponents from './components/docsComponents';
+import SvgIcon from './components/common/SvgIcon/index.vue'
 
 import http from '../../http'
 
@@ -28,6 +29,7 @@ export default ({ Vue }) => {
   Vue.component('OverviewList', OverviewList);
   Vue.component('preview-components', PreviewComponents);
   Vue.component('attribute-table', AttributeTable);
+  Vue.component('svg-icon', SvgIcon);
   Vue.use(docsComponents);
   Vue.prototype.http = http
 };

@@ -15,7 +15,9 @@
         <div slot="header" class="clearfix">
           <span>{{ item.name }}</span>
         </div>
-        <div class="content">内容</div>
+        <div class="content">
+          <svg-icon :icon="item.src"></svg-icon>
+        </div>
       </el-card>
     </el-col>
   </el-row>
