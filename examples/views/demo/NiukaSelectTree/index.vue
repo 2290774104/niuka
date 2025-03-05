@@ -32,7 +32,7 @@ export default class NiukaSelectTreeView extends Vue {
 
   public value2 = [];
 
-  public value3 = '';
+  public value3 = '3';
 
   public data = [
     {
@@ -42,6 +42,7 @@ export default class NiukaSelectTreeView extends Vue {
         {
           id: 3,
           label: '二级 2-1',
+          disabled: true,
           children: [
             {
               id: 4,

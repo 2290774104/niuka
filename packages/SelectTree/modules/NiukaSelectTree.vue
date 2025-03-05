@@ -36,13 +36,35 @@ export default class NiukaSelectTree extends Vue {
   valueChange(newVal: ValueType) {
     if (this.value.toString() !== this.selected.toString()) {
       this.$nextTick(() => {
+        const disabledKeys = this.findDisabledKeys(this.data); // 查找所有禁用的节点
         if (this.multiple) {
-          this.tree.setCheckedKeys(newVal as []);
+          this.tree.setCheckedKeys(
+            (newVal as string[]).filter((i) => !disabledKeys.includes(i))
+          );
         } else {
-          this.tree.setCheckedKeys([newVal]);
+          this.tree.setCheckedKeys(
+            disabledKeys.includes(newVal as string) ? [] : [newVal as string]
+          );
         }
       });
     }
+  }
+
+  // 查找所有禁用的节点
+  private findDisabledKeys(data: TreeData[]): string[] {
+    const disabledKeys = [];
+    data.forEach((item) => {
+      if (item[this.props.disabled]) {
+        disabledKeys.push(item.id.toString());
+      }
+      if (item[this.props.children] && item[this.props.children].length > 0) {
+        disabledKeys.push(...this.findDisabledKeys(item[this.props.children]));
+        if (this.selectLeaf) {
+          disabledKeys.push(item.id.toString());
+        }
+      }
+    });
+    return disabledKeys;
   }
 
   @Watch('selected', { deep: true })
@@ -55,7 +77,12 @@ export default class NiukaSelectTree extends Vue {
   @Prop({
     type: Object,
     default: () => {
-      return { id: 'id', children: 'children', label: 'label' };
+      return {
+        id: 'id',
+        children: 'children',
+        label: 'label',
+        disabled: 'disabled',
+      };
     },
   })
   private readonly props!: IProps;
