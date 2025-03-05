@@ -38,13 +38,17 @@ export default class NiukaSelectTree extends Vue {
       this.$nextTick(() => {
         const disabledKeys = this.findDisabledKeys(this.data); // 查找所有禁用的节点
         if (this.multiple) {
-          this.tree.setCheckedKeys(
-            (newVal as string[]).filter((i) => !disabledKeys.includes(i))
+          const checkedKeys = (newVal as string[]).filter(
+            (i) => !disabledKeys.includes(i)
           );
+          this.tree.setCheckedKeys(checkedKeys);
+          this.updateValue(checkedKeys);
         } else {
-          this.tree.setCheckedKeys(
-            disabledKeys.includes(newVal as string) ? [] : [newVal as string]
-          );
+          const checkedKey = disabledKeys.includes(newVal as string)
+            ? ''
+            : (newVal as string);
+          this.tree.setCheckedKeys([checkedKey]);
+          this.updateValue(checkedKey);
         }
       });
     }

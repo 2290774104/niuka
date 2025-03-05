@@ -30,7 +30,7 @@ import NiukaSelectTree from 'component/SelectTree';
 export default class NiukaSelectTreeView extends Vue {
   public value = '';
 
-  public value2 = [];
+  public value2 = ['3', '4'];
 
   public value3 = '3';
 
