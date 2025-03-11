@@ -1,10 +1,10 @@
 <template>
   <div>
     <niuka-select-tree v-model="value" :data="data">
-      <template slot="before">
+      <template #before="{}">
         <el-option label="前置插槽" value="before"></el-option>
       </template>
-      <template slot="after">
+      <template #after="{}">
         <el-option label="后置插槽" value="after"></el-option>
       </template>
     </niuka-select-tree>
