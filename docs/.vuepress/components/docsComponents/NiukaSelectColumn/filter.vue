@@ -15,7 +15,7 @@ export default {
     return {
       value: '',
       netWork: {
-        method: () => this.http.$get('/mock/column.json'),
+        method: () => this.http.$get('/niuka/mock/column.json'),
       }
     };
   },
