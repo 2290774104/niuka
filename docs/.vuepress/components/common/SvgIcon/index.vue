@@ -12,7 +12,12 @@ import IconSelect from './modules/Select.vue';
 import IconTagsInput from './modules/TagsInput.vue';
 import IconSelectTree from './modules/SelectTree.vue';
 import IconSelectColumn from './modules/SelectColumn.vue';
-import IconTable from './modules/Table.vue'
+import IconTable from './modules/Table.vue';
+import IconImageList from './modules/ImageList.vue';
+import IconLoadList from './modules/LoadList.vue';
+import IconSteps from './modules/Steps.vue';
+import IconAnchor from './modules/Anchor.vue';
+import IconContextmenu from './modules/Contextmenu.vue';
 
 // @ts-ignore
 @Component({
@@ -24,6 +29,11 @@ import IconTable from './modules/Table.vue'
     IconSelectTree,
     IconSelectColumn,
     IconTable,
+    IconImageList,
+    IconLoadList,
+    IconSteps,
+    IconAnchor,
+    IconContextmenu,
   },
 })
 export default class SvgIcon extends Vue {
