@@ -59,7 +59,7 @@ description: 下拉选择树组件
 
 <preview-components>
   <niuka-select-tree-slot slot="component"></niuka-select-tree-slot>
-  <<< @/docs/.vuepress/components/docsComponents/NiukaSelectTree/leaf.vue
+  <<< @/docs/.vuepress/components/docsComponents/NiukaSelectTree/slot.vue
 </preview-components>
 
 ## NiukaSelectTree Attributes
