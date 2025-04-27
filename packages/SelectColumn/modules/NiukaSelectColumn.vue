@@ -143,6 +143,11 @@ export default class NiukaSelectColumn extends Vue {
           })
         )
       );
+    } else if (data && typeof data !== 'string') {
+      this.optionsList = [{
+        value: data.id,
+        label: data.label,
+      }]
     }
   }
 
@@ -151,6 +156,8 @@ export default class NiukaSelectColumn extends Vue {
   private handleFilter(value: string) {
     this.filter = value;
   }
+
+  private optionsList: IOption[] = [];
 
   render() {
     const attrs = omit(this.$attrs, ['netWork', 'resultField', 'recently']);
@@ -166,6 +173,11 @@ export default class NiukaSelectColumn extends Vue {
       ) : (
         ''
       );
+    };
+    const renderOptions = (options: IOption[]) => {
+      return options.map((o) => {
+        return <el-option label={o.label} value={o.value}></el-option>;
+      });
     };
     return (
       <niuka-select-tree
@@ -186,7 +198,11 @@ export default class NiukaSelectColumn extends Vue {
             <el-option-group label="全部"></el-option-group>
           </template>
         ) : (
-          ''
+          <template slot="before">
+            <el-option-group label="选中" style="display: none;">
+              {renderOptions(this.optionsList)}
+            </el-option-group>
+          </template>
         )}
       </niuka-select-tree>
     );
