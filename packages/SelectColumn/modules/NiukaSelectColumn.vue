@@ -77,7 +77,7 @@ export default class NiukaSelectColumn extends Vue {
   }
 
   private initData(data: IData[]): TreeData[] {
-    return data.filter(i => i.catid).map((i) => {
+    return data.map((i) => {
       return {
         id: i.catid,
         label: i.name,
