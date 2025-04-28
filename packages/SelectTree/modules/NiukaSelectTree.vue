@@ -272,26 +272,30 @@ export default class NiukaSelectTree extends Vue {
         popper-class="niuka-select-tree-popper"
       >
         {this.$scopedSlots.before && this.$scopedSlots.before({})}
-        <el-option class="tree-option" value="tree">
-          <el-tree
-            ref="tree"
-            class={[this.selectLeaf ? 'leaf-tree' : '']}
-            data={this.data}
-            props={this.props}
-            node-key={this.idKey}
-            filter-node-method={this.filterNode}
-            show-checkbox
-            check-strictly
-            default-expand-all
-            {...{
-              on: {
-                'node-click': this.handleNodeClick,
-                check: this.handleCheck,
-                'check-change': this.handleCheckChange,
-              },
-            }}
-          ></el-tree>
-        </el-option>
+        {this.data.length > 0 ? (
+          <el-option class="tree-option" value="tree">
+            <el-tree
+              ref="tree"
+              class={[this.selectLeaf ? 'leaf-tree' : '']}
+              data={this.data}
+              props={this.props}
+              node-key={this.idKey}
+              filter-node-method={this.filterNode}
+              show-checkbox
+              check-strictly
+              default-expand-all
+              {...{
+                on: {
+                  'node-click': this.handleNodeClick,
+                  check: this.handleCheck,
+                  'check-change': this.handleCheckChange,
+                },
+              }}
+            ></el-tree>
+          </el-option>
+        ) : (
+          ''
+        )}
         {this.$scopedSlots.after && this.$scopedSlots.after({})}
         {renderTreeItem(this.treeData)}
       </el-select>
